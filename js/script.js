@@ -271,7 +271,7 @@ var o = $('#camera');
 
 /* Mailform
 =============================================*/
-;(function ($) {
+(function ($) {
     include('js/mailform/jquery.form.min.js');
     include('js/mailform/jquery.rd-mailform.min.c.js');
 })(jQuery);

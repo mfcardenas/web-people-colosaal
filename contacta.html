@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hack4People [Cont&aacute;ctanos] - Simulaciones de Comportamiento</title>
+    <meta name="ucm-colosaal" content="text/html;" http-equiv="content-type" charset="utf-8">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/mailform.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+
+    <!--[if lt IE 9]>
+    <html class="lt-ie9">
+    <div style="clear: both; text-align:center; position: relative;">
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="La versi&oacute;n de su navegador no est&aacute; actualizada. Para una mejor experiencia en este sitio web, le recomendamos que lo actualice.">
+        </a>
+    </div>
+    </html>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="js/device.min.js"></script>
+    <script src="js/validator.js"></script>
+</head>
+<body>
+<div class="page">
+    <!-- HEADER -->
+    <div id="header-include" w3-include-html="section/header.html" class="index"></div>
+
+    <!--
+    ========================================================
+                                CONTENIDO
+    ========================================================
+    -->
+    <main>
+        <section class="well3">
+            <div class="container">
+                <hr>
+                <ul class="row contact-list2">
+                    <li class="grid_3">
+                        <h3>Facultad de Informática</h3><a href="#">+34 91-394-7501&nbsp;+34 91-394-7599</a>
+                        <dl>
+                            <dt>Lunes - Viernes:</dt>
+                            <dd>9am-5pm</dd>
+                        </dl>
+                    </li>
+                    <li class="grid_3">
+                        <h3>Jorge Gómez Sanz</h3><a href="#">jjgomez@fdi.ucm.es</a>
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+                    <li class="grid_3">
+                        <h3>Juan Pavón</h3><a href="#">jpavon@ucm.es</a>
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+                    <li class="grid_3">
+                        <h3>GRASIA</h3><a href="#">grasia@ucm.es</a>
+                        <dl>
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <hr>
+                <!--ul class="row contact-list">
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-map-marker"></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <address>Calle Profesor Jos&eacute; Garc&iacute;a Santesmases, 9<br/> 28040 Madrid</address>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-envelope"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">grasia@ucm.es</a></div>
+                        </div>
+                    </li>
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-phone"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7501</a></div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-fax"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">+ 34 91-394-7599</a></div>
+                        </div>
+                    </li>
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-facebook"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="https://es-es.facebook.com/UniComplutense/" target="_blank">Follow on facebook</a></div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-twitter"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="https://twitter.com/unicomplutense?lang=es" target="_blank">Follow on Twitter</a></div>
+                        </div>
+                    </li>
+                </ul-->
+            </div>
+        </section>
+        <section class="well1">
+            <div class="container">
+                <h2>Feedback</h2>
+                <!-- <?php if ($_GET['notify'] == 1){ ?>
+                    <div class="alert alert-success fade in">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>Listo!</strong> Su mensaje ha sido enviado correctamente.
+                    </div>
+                <?php } else { ?>
+                <div class="alert alert-success fade in">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Lo sentimos!</strong> Su mensaje no ha sido posible enviarlo.
+                </div>
+                <?php }  ?> -->
+                <form data-toggle="validator" action="mail.php" class="mailform off2" method="POST" role="form">
+                    <input type="hidden" name="form-type" value="contact">
+                    <fieldset class="row">
+                        <label class="grid_4">
+                            <input required type="text" id="name" name="name" placeholder="Nombre:*"
+                                   data-constraints="@LettersOnly @NotEmpty">
+                        </label>
+                        <label class="grid_4">
+                            <input type="text" id="phone" name="phone" placeholder="Telefono:" data-constraints="@Phone">
+                        </label>
+                        <label class="grid_4">
+                            <input required type="text" id="email" name="email" placeholder="Email:*" data-constraints="@Email @NotEmpty">
+                        </label>
+                        <label class="grid_12">
+                            <textarea required id="message" name="message" placeholder="Mensaje:*" data-constraints="@NotEmpty"></textarea>
+                        </label>
+                        <div class="mfControls grid_12">
+                            <button type="submit" class="btn">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-include" w3-include-html="section/footer.html"></div>
+</div>
+<script src="js/script.js"></script>   <!-- !Important -->
+<script src="js/w3data.js"></script>   <!-- !Important -->
+<script src="js/utils.js"></script>    <!-- !Important -->
+</body>
+</html>

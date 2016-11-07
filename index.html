@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" content="">
 <head>
-    <title>ColosAAL People Simulations and Tools</title>
-    <meta name="ucm-colosaal"  content="text/html;" http-equiv="content-type" charset="utf-8">
+    <title>Hack4People [Inicio] - Simulaciones de Comportamiento</title>
+    <meta name="ucm-colosaal" content="text/html;" http-equiv="content-type" charset="utf-8">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/camera.css">
     <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/mailform.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script>
     <!--[if lt IE 9]>
@@ -19,45 +20,15 @@
         </a>
     </div>
     </html>
-    <script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
     <script src="js/device.min.js"></script>
 </head>
 <body>
 <div class="page">
-    <!--
-    ********************************************************
-                                CABECERA
-    ********************************************************
-    -->
-    <header>
-        <div class="container">
-            <div class="brand">
-                <h1 class="brand_name"><a href="./"><img src="images/logo.png"/> ColosAAL</a></h1>
-                <p class="brand_slogan">Simulación de Comportamiento para Soluciones AAL</p>
-            </div>
-            <a href="callto:#" class="fa-phone">&nbsp;</a>
-            <p>&nbsp;</p>
-        </div>
-        <div id="stuck_container" class="stuck_container">
-            <div class="container">
-                <nav class="nav">
-                    <ul data-type="navbar" class="sf-menu">
-                        <li class="active"><a href="index.html">Home</a>
-                        </li>
-                        <li><a href="#">Proyectos</a>
-                            <ul>
-                                <li><a href="http://grasia.fdi.ucm.es/aide" target="_blank">AIDE</a></li>
-                                <li><a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL</a></li>
-                                <li><a href="http://grasia.fdi.ucm.es/Social" target="_blank">Social</a></li>
-                                <li><a href="#">Massis</a></li>
-                                <li><a href="#">CAM Assistant</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- HEADER -->
+    <div id="header-include" w3-include-html="section/header.html" class="index"></div>
+
     <!--
     ========================================================
                                 CONTENIDO
@@ -88,7 +59,9 @@
                     <div class="camera_caption fadeIn">
                         <div class="container">
                             <div class="row">
-                                <div class="preffix_6 grid_6">Prototipos Hardware de Monitorizaci&oacute;n de Actividad</div>
+                                <div class="preffix_6 grid_6">Diseño de Prototipos de Monitorizaci&oacute;n de
+                                    Actividad
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -102,26 +75,25 @@
                         <div class="fa-globe"></div>
                         <h3>Usuarios<br/>con ceguera</h3>
                         <p>Se construyen simulaciones de pacientes con problemas de ceguera para que expertos
-                            puedan analizar las limitaciones de estos usuarios en espacios determinados.</p><a href="#"></a>
+                            puedan analizar las limitaciones de estos usuarios en espacios determinados, sobre todo cuando estos no cuentan con personas que les acompañen en sus actividades diarias.</p><a
+                            href="#"></a>
                     </li>
                     <li>
                         <div class="fa-lightbulb-o"></div>
                         <h3>Pacientes<br/>con Parkinson</h3>
-                        <p>Se crean escenarios simulados de pacientes con Parkinson en diferentes partes del cuerpo para que
-                            expertos puedan diseñar y construir soluciones que mejoren su d&iacute;a a d&iacute;a.</p><a href="#"></a>
+                        <p>Se crean casos pr&aacute;cticos simulados de pacientes con Parkinson con los síntomas de la enfermedad en diferentes partes del cuerpo para
+                            que expertos puedan valorar las dificultades que viven. Uno de los propósito  de esta valoración es diseñar soluciones que mejoren su d&iacute;a a d&iacute;a.</p><a href="#"></a>
                     </li>
                     <li>
                         <div class="fa-cog"></div>
                         <h3>Movilidad<br/> reducida</h3>
-                        <p>Se pueden cocrear simulaciones de pacientes que tienen permanente o temporalmente limitada
-                            la capacidad de moverse sin ayuda externa para que entre los expertos y el propio usuario se puedan
-                            proponer ideas que beneficien su movilidad.</p><a href="#"></a>
+                        <p>Se pueden cocrear simulaciones de pacientes con movilidad reducida. Se construyen escenarios concretos que muestren la dificultad del paciente en grandes espacios o en su propia viviena. Estudiar estos escenarios permitirá generar soluciones que mejoren estos espacios.</p><a href="#"></a>
                     </li>
                     <li>
                         <div class="fa-briefcase"></div>
                         <h3>Simulaci&oacute;n<br/>Viviendas Accesibles</h3>
-                        <p>Es posible construir simulaciones de espacios accesibles para determinados pacientes, ubicar dispositivos
-                            de monitorizaci&oacute;n para el control de actividad en estos pacientes y con base a los resultados observados
+                        <p>Es posible construir simulaciones de espacios accesibles para determinados pacientes. Ubicar
+                            dispositivos de monitorizaci&oacute;n para el control de actividad y con base a los resultados observados
                             construir soluciones de adaptabilidad de viviendas.</p><a href="#"></a>
                     </li>
                 </ul>
@@ -136,51 +108,57 @@
                                 <div class="icon fa-calendar-o"></div>
                             </div>
                             <div class="box_cnt__no-flow">
-                                <h3><a href="#">Pacientes con Parkins&oacute;n</a></h3>
-                                <p>Se simula la enfermedad en partes concretas del cuerpo y se recrean posibles accidentes del paciente.</p>
+                                <h3><a href="#">Pacientes con Alzh&eacute;imer</a></h3>
+                                <p>Se simulan síntomas de la enfermedad y se recrean situaciones diarias del paciente.</p>
                                 <div class="contenedor-video">
-                                    <video src="videos/video-parkinson-user.ogv" class="iframe" controls="controls" loop="loop" autoplay="autoplay"></video>
+                                    <video src="videos/video-alzheimer-cp-1.mp4" class="iframe" controls="controls"
+                                           loop="loop" autoplay="autoplay"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-wow-delay="0.2s" class="box wow fadeInLeft">
+                            <div class="box_aside">
+                                <div class="icon fa-thumbs-up"></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><a href="#">Diseño de Monitores de actividad con Sensores</a></h3>
+                                <p>Se simula el uso de sensores y otros dispositivos para evaluar la actividad del paciente en su vivienda.</p>
+
+                                <div class="contenedor-video">
+                                    <video src="videos/video-sensor-cp-1.mp4" class="iframe" controls="controls"
+                                           loop="loop" autoplay="autoplay"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <div class="icon fa-calendar-o"></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><a href="#">Pacientes con Parkins&oacute;n</a></h3>
+                                <p>Se simula la enfermedad en partes concretas del cuerpo y se estudian posibles
+                                    accidentes del paciente.</p>
+                                <div class="contenedor-video">
+                                    <video src="videos/video-parkinson-cp-1.mp4" class="iframe" controls="controls"
+                                           loop="loop" autoplay="autoplay"></video>
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div data-wow-delay="0.4s" class="box wow fadeInRight">
                             <div class="box_aside">
-                                <div class="icon fa-thumbs-up"></div>
-                            </div>
-                            <div class="box_cnt__no-flow">
-                                <h3><a href="#">Diseño de Monitores de actividad con Sensores</a></h3>
-                                <p>Antes de invertir en dispositivos electr&oacute;nicos reales, se simula el uso de sensores en la vivienda del paciente.</p>
-
-                                <div class="contenedor-video">
-                                    <video src="videos/video-detector-presencia.mp4" class="iframe" controls="controls" loop="loop" autoplay="autoplay"></video>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="grid_6">
-                        <div class="box wow fadeInRight">
-                            <div class="box_aside">
                                 <div class="icon fa-comments"></div>
                             </div>
                             <div class="box_cnt__no-flow">
                                 <h3><a href="#">Actividades Diarias con y sin Limitaciones</a></h3>
-                                <p>Se pueden simular las actividades diarias que realiza el paciente tanto en su vivienda como en espacios abiertos.</p>
+                                <p>Se pueden simular las actividades diarias que realiza el paciente tanto en su
+                                    vivienda como en espacios abiertos.</p>
                                 <div class="contenedor-video">
-                                    <video src="videos/video-actividades-diarias.mp4" class="iframe" controls="controls" loop="loop" autoplay="autoplay"></video>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
-                            <div class="box_aside">
-                                <div class="icon fa-group"></div>
-                            </div>
-                            <div class="box_cnt__no-flow">
-                                <h3><a href="#">Interfaz de comunicaci&oacute;n en la Simulaci&oacute;n</a></h3>
-                                <p>La simulaci&oacute;n puede utilizar el reconocimiento de audio y movimiento y aplicarlo sobre el paciente.</p>
-                                <div class="contenedor-video">
-                                    <video src="videos/video-pruebas-audio-en-simulacion.mp4"  class="iframe" controls="controls" loop="loop" autoplay="autoplay"></video>
+                                    <video src="videos/video-actividad-diaria-cp-1.mp4" class="iframe" controls="controls"
+                                           loop="loop" autoplay="autoplay"></video>
                                 </div>
                             </div>
                         </div>
@@ -193,26 +171,28 @@
                 <div class="row">
                     <div class="grid_4">
                         <h2>CAM Assistant</h2><img src="images/img-camera-cam-assistant.bmp" alt="">
-                        <p>CAM Assistant es una herramienta Web colaborativa que permite a diferentes expertos participar en el estudio y an&aacute;lisis de las simulaciones de comportamiento generadas con la herramienta de modelado. Cada simulaci&oacute;n puede generar un n&uacute;mero de perspectivas o c&aacute;maras diferente, las cuales visualizar&aacute;n en formato v&iacute;deo el caso de estudio simulado.</p>
-                        <p>No es necesario ser un experto inform&aacute;tico para generar las simulaciones, esta herramienta prec&iacute;samente lo que busca es que cualquier usuario pueda participar en la simulaci&oacute;n registrando comentarios u observaciones sobre las diferentes caracter&iacute;sticas del comportamiento simulado aplicado a su campo de estudio.</p>
-                        <p>Los comentarios se iran visualizando sobre cada v&iacute;deo en forma de subtitulos, luego esta informaci&oacute;n se centralizar&aacute; para mejorar el progreso de las simulaciones y los proyectos que participen en ellos. </p>
-                        <!--a href="#" class="btn">Read more</a-->
+                        <p>CAM Assistant es una herramienta Web colaborativa que permite a diferentes expertos
+                            participar en el estudio y an&aacute;lisis de las simulaciones de comportamiento generadas
+                            con la herramienta de modelado. Cada simulaci&oacute;n puede generar un n&uacute;mero de
+                            perspectivas o c&aacute;maras diferente, las cuales visualizar&aacute;n en formato v&iacute;deo
+                            el caso de estudio pr&aacute;ctico.</p>
+                        <a href="cam-assistant.html" class="btn">Ver m&aacute;s</a>
                     </div>
                     <div class="grid_4">
                         <h2>Proyectos Multidisciplinarios</h2>
-                        <p>Si eres experto o trabajas en campos como las Ciencias Sociales o Ciencias de la Salud y consideras que puedes utilizar las simulaciones de comportamiento en algun caso de estudio de tu investigaci&oacute;n o sencillamente deseas colaborar en proyectos cuyos casos de uso se pueden estudiar utilizando este tipo de simulaciones puedes hacerlo con nosotros.</p>
+                        <p>Si eres experto o trabajas en áreas de las Ciencias Sociales o Ciencias de la Salud y
+                            consideras que puedes utilizar las simulaciones de comportamiento en algun caso de estudio
+                            de tu investigaci&oacute;n o sencillamente deseas colaborar en proyectos cuyos casos de uso
+                            se pueden estudiar utilizando este tipo de simulaciones puedes hacerlo con nosotros.</p>
                         <p>Estas son algunas posibles ideas de proyecto</p>
                         <ul class="marked-list">
                             <li><a href="#">Simulaci&oacute;n de comportamiento de personas con ceguera</a></li>
                             <li><a href="#">Simulaci&oacute;n de Parkinson en partes concretas del cuerpo</a></li>
                             <li><a href="#">Simulaci&oacute;n de pacientes con par&aacute;lisis cerebral</a></li>
-                            <li><a href="#">Simulaci&oacute;n de pacientes con s&iacute;ndrome de Down</a></li>
+                            <li><a href="#">Simulaci&oacute;n de pacientes con Alzh&eacute;imer</a></li>
                             <li><a href="#">Simulaci&oacute;n de movilidad reducida por efectos del alcohol</a></li>
-                            <li><a href="#">Diseño de Monitores de Actividad para el paciente</a></li>
-                            <li><a href="#">Diseño de Monitores de Actividad para el cuidador</a></li>
-                            <li><a href="#">Diseño de prototipos hardware de monitorizaci&oacute;n</a></li>
                         </ul>
-                        <!--a href="#" class="btn">Read more</a-->
+                        <a href="about.html" class="btn">Ver m&aacute;s</a>
                     </div>
                     <div class="grid_4">
                         <div class="info-box">
@@ -244,7 +224,9 @@
                                     <div class="box_aside"><img src="images/img-pavon-mestras.jpeg" alt=""></div>
                                     <div class="box_cnt__no-flow">
                                         <p>
-                                            <q>He joined UCM at the end of 1997, where he created the GRASIA research group, whose focus is on the application of multi-agent systems technology.</q>
+                                            <q>He joined UCM at the end of 1997, where he created the GRASIA research
+                                                group, whose focus is on the application of multi-agent systems
+                                                technology.</q>
                                         </p>
                                         <cite><a href="#">Co-director GRASIA</a></cite>
                                     </div>
@@ -255,7 +237,9 @@
                                     <div class="box_aside"><img src="images/img-jjgomez.jpeg" alt=""></div>
                                     <div class="box_cnt__no-flow">
                                         <p>
-                                            <q>His PhD introduced the INGENIAS methodology for the development of Multi-Agent systems, which has been widely cited. He is the co-director of the GRASIA research group.</q>
+                                            <q>His PhD introduced the INGENIAS methodology for the development of
+                                                Multi-Agent systems, which has been widely cited. He is the co-director
+                                                of the GRASIA research group.</q>
                                         </p>
                                         <cite><a href="#">Co-director GRASIA</a></cite>
                                     </div>
@@ -266,7 +250,9 @@
                                     <div class="box_aside"><img src="images/img-marlon-cardenas.jpg" alt=""></div>
                                     <div class="box_cnt__no-flow">
                                         <p>
-                                            <q>Is a PhD student with a FPI contract associated with ColoSAAL project, he joined GRASIA in January 2016, conducts investigations based in the field of Ambient Assisted Living (AAL)</q>
+                                            <q>Is a PhD student with a FPI contract associated with ColoSAAL project, he
+                                                joined GRASIA in January 2016, conducts investigations based in the
+                                                field of Ambient Assisted Living (AAL)</q>
                                         </p>
                                         <cite><a href="#">Assistant Research GRASIA</a></cite>
                                     </div>
@@ -277,7 +263,9 @@
                                     <div class="box_aside"><img src="images/img-rafael-pax.jpg" alt=""></div>
                                     <div class="box_cnt__no-flow">
                                         <p>
-                                            <q>Is currently working at Universidad Complutense of Madrid (UCM) in the project MOSI-AGIL, while studing a M.Sc degree in the same university.</q>
+                                            <q>Is currently working at Universidad Complutense of Madrid (UCM) in the
+                                                project MOSI-AGIL, while studing a M.Sc degree in the same
+                                                university.</q>
                                         </p>
                                         <cite><a href="#">Assistant Research GRASIA</a></cite>
                                     </div>
@@ -289,74 +277,12 @@
             </div>
         </section>
     </main>
-    <!--
-    ========================================================
-                              PIE
-    ========================================================
-    -->
-    <footer>
-        <section class="well3">
-            <div class="container">
-                <ul class="row contact-list">
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-map-marker"></div>
-                            </div>
-                            <div class="box_cnt__no-flow">
-                                <address>Calle Profesor Jos&eacute; Garc&iacute;a Santesmases, 9<br/> 28040 Madrid</address>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-envelope"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="#">m@ucm.es</a></div>
-                        </div>
-                    </li>
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-phone"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7501</a></div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-fax"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="#">+ 34 91-394-7599</a></div>
-                        </div>
-                    </li>
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-facebook"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="https://es-es.facebook.com/UniComplutense/" target="_blank">facebook</a></div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-twitter"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="https://twitter.com/unicomplutense?lang=es" target="_blank">Twitter</a></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="copyright">UCM © Universidad Complutense de Madrid&nbsp;<span id="copyright-year"></span>.&nbsp;&nbsp;
-                    <a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL</a>&nbsp;&nbsp;
-                    <a href="http://grasia.fdi.ucm.es/newmain/language/en/" target="_blank">GRASIA</a>&nbsp;&nbsp;
-                    <a rel="nofollow" href="http://www.ucm.es" target="_blank">Facultad de Inform&aacute&aacute;tica</a>
 
-                </div>
-            </div>
-        </section>
-    </footer>
+    <!-- FOOTER -->
+    <div id="footer-include" w3-include-html="section/footer.html"></div>
 </div>
-<script src="js/script.js"></script>
+<script src="js/script.js"></script> <!-- !Important -->
+<script src="js/w3data.js"></script> <!-- !Important -->
+<script src="js/utils.js"></script> <!-- !Important -->
 </body>
 </html>

@@ -54,4 +54,4 @@ if (isset($_POST['name'], $_POST['email'], $_POST['message'])) {
     $notify = "3";
 }
 
-header("Location:contacta.php?notify=" . $notify);
+header("Location:contacta.html?notify=" . $notify);

@@ -17,12 +17,12 @@ if (isset($_POST['name'], $_POST['email'], $_POST['message'])) {
                     <body> 
                         <h1>Solicitud de Información desde la Web Hack4People</h1> 
                         <p> 
-                            <b>'. ucwords($name) .' </b>. realiza la siguiente petición:<br/>'. $message . '. 
+                            <b>' . ucwords($name) . ' </b>. realiza la siguiente petición:<br/>' . $message . '. 
                         </p>
                         <p>
                             Datos suministrados:<br/>
-                            <b>Email: '. $email.'</b><br/>
-                            <b>Teléfono: '. $phone.'</b><br/>
+                            <b>Email: ' . $email. '</b><br/>
+                            <b>Teléfono: ' . $phone. '</b><br/>
                         </p>
                     </body> 
                 </html>';

@@ -4725,8 +4725,8 @@ div#vmap {
 
 /* css for element tags and editing section */
 p {
-	background-color: #eee;
-	border: thin solid #777;
+	/*background-color: #eee;
+	border: thin solid #777;*/
 	padding: 10px;
 }
 
@@ -4833,4 +4833,10 @@ ul#marker-list li a:hover {
 
 #collapse4 {
 	text-align: left;
+}
+
+.img_responsive {
+	max-width: 100%;
+	height: auto;
+	vertical-align: center;
 }

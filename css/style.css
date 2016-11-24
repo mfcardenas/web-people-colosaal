@@ -357,6 +357,7 @@ p + .btn_wr {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .btn:hover,
 .btn2:hover {
   background: #4ab5e2;
@@ -414,12 +415,50 @@ p + .btn_wr {
   float: left;
 }
 .box_aside img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 .box_cnt__no-flow {
   overflow: hidden;
 }
+.box_cnt__no-flow span {
+  font-style: inherit;
+}
+
+.boxx {
+  width: 100%;
+}
+.boxx-gray {
+  background: #f8f8f8 none repeat scroll 0 0;
+  padding: 20px 20px 30px;
+}
+.boxx-gray h4, .boxx-gray i {
+  margin-bottom: 20px;
+}
+.boxx h4 {
+  font-weight: 300;
+}
+.boxx .icon {
+  margin-bottom: 20px;
+}
+
+.grid_6 span {
+  color: #62bfe6;
+  font-style: inherit;
+  display: block;
+}
+
+.grid_6 a {
+  color: #62bfe6;
+  font-style: inherit;
+}
+
+.grid_6 a:hover {
+  text-decoration: underline;
+  color: #0358ad;
+}
+
+
 
 /*==================     Banner    ======================*/
 .banner_wr {
@@ -459,10 +498,17 @@ p + .btn_wr {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
+.md li {
+  height: 250px; !important;
+}
 .banner li:hover {
   margin-top: 0px;
   height: 388px;
   padding-bottom: 50px;
+}
+
+.md li:hover {
+  height: 288px; !important;
 }
 .banner li [class*="fa-"] {
   font-size: 62px;
@@ -643,13 +689,14 @@ blockquote p + cite {
 
 /*==================  Marked List  ======================*/
 .marked-list li {
+  content: "\f00c";
   position: relative;
   padding-left: 41px;
   padding-top: 16px;
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
-  color: #62bfe6;
+  color: #434547;
 }
 .marked-list li a:before {
   content: "\f00c";
@@ -1338,6 +1385,11 @@ footer .copyright a:hover {
   height: auto   !important;
 }
 
+.img_responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 .iframe{
 
     position:absolute;
@@ -1354,4 +1406,116 @@ footer .copyright a:hover {
     padding-top:56.25%; /* Relación: 16/9 = 56.25% */
     position:relative;
 
+}
+
+.micarrousel > div{
+  height: 50%;
+  margin: auto;
+}
+
+.aligncenter{
+  text-align:center;
+}
+
+.aligncenter span{
+  margin-left:0;
+}
+
+.center {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.img_wim {
+  width: 50px; !important;
+  height: 50px; !important;
+}
+
+
+/****************************************************************/
+.wrap_card > h1 {
+  color: rgb(221, 142, 22);
+  margin: 14px auto 0;
+}
+#showcase {
+  height: 870px;
+  overflow: visible !important;
+}
+.card {
+  width: 350px;
+  padding: 12px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 2px white dotted;
+  border-radius: 12px;
+}
+.card h2 {
+  margin: 0 0 7px 0;
+}
+.card a {
+  font-size: 18px;
+  display: block;
+}
+.card p {
+  font-size: 15px;
+}
+.nav_card {
+  width: 64px;
+  height: 134px;
+  color: #ccc;
+  font: bold 3em "Lucida Grande";
+  text-align: center;
+  text-shadow: 0px 1px 0px #f5f5f5;
+  background: rgba(150, 150, 150, 0.5);
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  position: absolute;
+  top: 33%;
+}
+.nav_card:active,
+.nav_card.down {
+  background: rgba(120, 120, 120, 0.5);
+  border: solid 2px rgba(0, 0, 0, 0.55);
+}
+.nav_card.left_card {
+  left: -43px;
+  -webkit-border-radius: 12px 5px 5px 12px;
+  -moz-border-radius: 12px 5px 5px 12px;
+  border-radius: 12px 5px 5px 12px;
+}
+.nav_card.right_card {
+  right: -43px;
+  -webkit-border-radius: 5px 12px 12px 5px;
+  -moz-border-radius: 5px 12px 12px 5px;
+  border-radius: 5px 12px 12px 5px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrap_card {
+  width: 980px; /* fixed width, centered in viewport */
+  left: -490px;
+  margin-left: 50%;
+  position: relative;
+}
+.wrap_card > h1 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 3px;
+}
+#showcase {
+  visibility: hidden;
+}
+#showcase img {
+  cursor: pointer;
 }

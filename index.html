@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" content="">
 <head>
-    <title>Hack4People [Inicio] - Simulaciones de Comportamiento</title>
+    <title>HackWithPeople - Inicio</title>
     <meta name="ucm-colosaal" content="text/html;" http-equiv="content-type" charset="utf-8">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/camera.css">
     <link rel="stylesheet" href="css/owl-carousel.css">
     <link rel="stylesheet" href="css/mailform.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script>
     <!--[if lt IE 9]>
@@ -22,12 +24,41 @@
     </html>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
+    <script src="js/slick.min.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/device.min.js"></script>
 </head>
 <body>
 <div class="page">
     <!-- HEADER -->
-    <div id="header-include" w3-include-html="section/header.html" class="index"></div>
+    <!--
+    ********************************************************
+                                CABECERA
+    ********************************************************
+    -->
+    <header>
+        <div class="container">
+            <div class="brand">
+                <h1 class="brand_name"><a href="./"><img src="images/logo.png"/> HackWithPeople</a></h1>
+                <p class="brand_slogan">Tecnología con y para la gente</p>
+            </div>
+            <!--a href="callto:#" class="fa-phone">&nbsp;</a-->
+            <p>&nbsp;</p>
+        </div>
+        <div id="stuck_container" class="stuck_container">
+            <div class="container">
+                <nav class="nav">
+                    <ul data-type="navbar" class="sf-menu">
+                        <li id="index" class="active"><a href="index.html">Inicio</a></li>
+                        <li id="about"><a href="about.html">Quiénes somos</a></li>
+                        <li id="casos_practicos"><a href="casos_practicos.html">Casos Pr&aacute;cticos</a></li>
+                        <li id="licencia"><a href="licence.html">Licencia</a></li>
+                        <li id="contactanos"><a href="contacta.html">Cont&aacute;ctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <!--
     ========================================================
@@ -35,120 +66,21 @@
     ========================================================
     -->
     <main>
-        <section class="camera_container">
-            <div id="camera" class="camera_wrap">
-                <div data-src="images/page-1_slide01.jpg">
-                    <div class="camera_caption fadeIn">
-                        <div class="container">
-                            <div class="row">
-                                <div class="preffix_6 grid_6">Simulaci&oacute;n de Multitudes en Grandes Espacios</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-src="images/page-1_slide02.jpg">
-                    <div class="camera_caption fadeIn">
-                        <div class="container">
-                            <div class="row">
-                                <div class="preffix_6 grid_6">Lenguaje Modelado para Generar Simulaciones</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-src="images/page-1_slide03.jpg">
-                    <div class="camera_caption fadeIn">
-                        <div class="container">
-                            <div class="row">
-                                <div class="preffix_6 grid_6">Diseño de Prototipos de Monitorizaci&oacute;n de
-                                    Actividad
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="well1">
-            <div class="container">
-                <p>
-                    Esta iniciativa persigue identificar y ayudar a entender cómo es la vida de una persona con necesidades especiales. Las personas con necesidades especiales son, o van a ser, una mayoría de la población, ya que según las proyecciones la mayoría de personas tendrán complicaciones propias de la edad de aquí en 20 años posiblemente colapsando los sistemas de asistencia.</p>
-
-                <p>Colaborar y encontrar soluciones que ayuden a gente en estas situaciones es el objetivo de esta iniciativa. En esta apuesta participan de forma altruista estudiantes, profesores y profesionales de distintos ámbitos. Queremos imaginar y construir soluciones asistivas, aunque la tecnología todavía no lo permita en algunos casos. Queremos juntar a la gente que conoce los problemas con la gente que tiene los conocimientos para elaborar las soluciones.</p>
-
-                <p>Los intentos aislados por crear tecnologías asistivas son arriesgados. En la mayoría de los proyectos reales, se fracasa porque no se conoce el problema a resolver y la solución que se pensaba era necesaria, resulta que no es adecuada. La co-creación es el camino más seguro y para ello, hacen falta mecanismos que permitan a unos explicar cuál es el problema, a otros proponer soluciones, y a ambos el decidir si esas soluciones son las apropiadas.</p>
-
-                <p>En esta iniciativa se apuesta por las simulaciones 3D como interlingua que sirva para que todos entiendan de qué se está hablando:
-                    <ul class="marked-list">
-                        <li><a href="#">Para que los profesionales y personas con situaciones especiales puedan expresar qué les ocurre</a></li>
-                        <li><a href="#">Para que los tecnólogos puedan interaccionar con el problema sin hacer grandes inversiones</a></li>
-                        <li><a href="#">Para que las soluciones puedan ser valoradas por todos los participantes, buscando enriquecer el producto antes de empezar a construirlo</a></li>
-                    </ul>
-                </p>
-                <p style="text-align: center;">
-                    <img src="images/img-esquema-participativo-3.png" alt="Participación" title="Participación" />
-                </p>
-                <p>&nbsp;</p>
-                <p>
-                    Hack4People es una iniciativa para combinar esfuerzos de expertos en el estudio y descubrimiento de tecnologías asistivas para mejorar la calidad de vida de la población. La forma de hacerlo es creando espacios de trabajo donde los usuarios, según su interés, puedan participar en todas las fases del proyecto:</p>
-                <p>&nbsp;</p>
-                <p style="text-align: center;">
-                    <img src="images/img-participacion-ciclo.png" alt="Participación Ciclo" title="Participación Ciclo" />
-                </p>
-                <p>&nbsp;</p>
-                <p>
-                    <ul class="marked-list">
-                        <li>Conoce los casos de estudios definidos.</li>
-                        <li>Comenta o sugiere un caso de estudio nuevo, te facilitamos una aplicación web para aportar tus comentarios.</li>
-                        <li>Una vez analizados los casos de estudio, puedes participar en las sesiones de trabajo donde se definirán soluciones</li>
-                        <li>Si quieres ir más allá, crea tus propios casos de estudio y modela tus propias simulaciones, tendrás a tu disposición todas las herramientas para ello.</li>
-                        <li>Cuando se defina una solución para un caso concreto, podrás participar en su construcción o incluso aportar alternativas para su desarrollo. En sesiones de trabajo más técnicas se estudiar&aacute;n las diferentes propuestas.</li>
-                    </ul>
-                </p>
-                <p>&nbsp;</p>
-
-            </div>
-        </section>
-        <section>
-            <div class="container banner_wr">
-                <ul class="banner">
-                    <li>
-                        <h3>Pacientes<br/>con Parkinson</h3>
-                        <p>Se crean casos pr&aacute;cticos simulados de pacientes con Parkinson con los síntomas de la enfermedad en diferentes partes del cuerpo para
-                            que expertos puedan valorar las dificultades que viven. Uno de los propósito  de esta valoración es diseñar soluciones que mejoren su d&iacute;a a d&iacute;a.</p><a href="#"></a>
-                    </li>
-                    <li>
-                        <h3>Usuarios<br/>con ceguera</h3>
-                        <p>Se construyen simulaciones de pacientes con problemas de ceguera para que expertos puedan analizar las limitaciones de estos usuarios en espacios determinados, sobre todo cuando estos no cuentan con personas que les acompañen en sus actividades diarias.</p><a
-                            href="#"></a>
-                    </li>
-                    <li>
-                        <h3>Movilidad<br/> reducida</h3>
-                        <p>Se pueden cocrear simulaciones de pacientes con movilidad reducida. Se construyen escenarios concretos que muestren la dificultad del paciente en grandes espacios o en su propia vivienda. Estudiar estos escenarios permitirá generar soluciones que mejoren estos espacios.</p><a href="#"></a>
-                    </li>
-                    <li>
-                        <h3>Simulaci&oacute;n<br/>Viviendas Accesibles</h3>
-                        <p>Es posible construir simulaciones de espacios accesibles para determinados pacientes. Ubicar
-                            dispositivos de monitorizaci&oacute;n para el control de actividad y con base a los resultados observados
-                            construir soluciones de adaptabilidad de viviendas.</p><a href="#"></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section class="well ins1">
             <div class="container hr">
+                <h2>Retos inminentes</h2>
                 <ul class="row product-list">
                     <li class="grid_6">
                         <div data-wow-delay="0.2s" class="box wow fadeInRight">
                             <div class="box_aside">
-                                <div class="icon fa-calendar-o"></div>
+                                <div class="icon "></div>
                             </div>
                             <div class="box_cnt__no-flow">
-                                <h3><a href="#">Pacientes con Alzh&eacute;imer</a></h3>
-                                <p>Se simulan síntomas de la enfermedad creando casos de estudios prácticos para poder valorar las dificultades del paciente en situaciones cotidianas.</p>
-                                <div class="contenedor-video">
-                                    <video src="videos/video-alzheimer-cp-1.mp4" class="iframe" controls="controls"
-                                           loop="loop" autoplay="autoplay"></video>
+                                <h3><span>Envejecimiento de la población</span></h3>
+                                <p>Europa se acerca a un cambio demográfico. Entre otras medidas, debemos prepararnos con políticas de envejecimiento activo que puedan mejorar la vida de las <a href="https://ec.europa.eu/research/social-sciences/pdf/policy_reviews/kina26426enc.pdf" target="_blank">familias que tengan algún miembro con problemas para desarrollar su actividad diaria.</a>.
+                                </p>
+                                <div>
+                                    <img src="images/img-ned-horton.jpg" width="350" height="350" alt="Image By Ned horton" title="Image By Ned Horton"/>
                                 </div>
                             </div>
                         </div>
@@ -157,124 +89,511 @@
                     <li class="grid_6">
                         <div data-wow-delay="0.3s" class="box wow fadeInRight">
                             <div class="box_aside">
-                                <div class="icon fa-calendar-o"></div>
+                                <div class="icon "></div>
                             </div>
                             <div class="box_cnt__no-flow">
-                                <h3><a href="#">Pacientes con Parkins&oacute;n</a></h3>
-                                <p>Se simula la enfermedad en partes concretas del cuerpo y se estudian posibles
-                                    accidentes del paciente.</p>
-                                <div class="contenedor-video">
-                                    <video src="videos/video-parkinson-cp-1.mp4" class="iframe" controls="controls"
-                                           loop="loop" autoplay="autoplay"></video>
+                                <h3><span>Enfermedades neurodegenerativas</span></h3>
+                                <p>A nivel mundial, <a href="http://www.who.int/mediacentre/factsheets/fs362/es/" target="_blank">47.6 millones de personas tienen demencia y hay 7.7 millones de casos nuevos cada año</a>. El Parkinson afecta <a href="http://www.pdf.org/en/parkinson_statistics">a más de 10 millones de personas en el mundo. </a></p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <div class="icon "></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Discapacidades</span></h3>
+                                <p><a href="https://www.disabled-world.com/disability/statistics/">Un 10% de la población mundial nace con alguna discapacidad</a>. Algunos nacen con discapacidades que les dejan en desventaja en una sociedad no inclusiva.  Otros desarrollan la descapacidad a lo largo de su vida, por motivo de algún accidente o alguna enfermedad. Pueden y quieren sentirse capaces. </p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="well ins1">
+            <div class="container hr">
+                <h2>Las tecnologías asistivas al rescate</h2>
+                <ul class="row product-list">
+                    <li class="grid_6">
+                        <div data-wow-delay="0.2s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <!--div class="icon "></div-->
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><a href="#"></a></h3>
+                                <p>Los avances científicos, en lo que a enfermedades neurodegenerativas se refiere, tienen un avance lento, especialmente por lo errático en la financiación de la investigación básica. Las tecnologías asistivas no son una solución, pero pueden hacer la vida más llevadera a quien tiene alguna enfermedad y pueden integrar mejor a la sociedad a los que tienen alguna discapacidad. </p>
+                                <div>
+                                    <img src="images/img-head-wand.jpg" alt="Quadriplegic using head wand, image by Joseph Lorenzo Hall" title="Quadriplegic using head wand, image by Joseph Lorenzo Hall" class="img_responsive"/>
+                                    <img src="images/img-gyrogearglove.jpg" alt="GyroGlove by GyroGear group, a device for counter parkinson-caused hand trmors" title="GyroGlove by GyroGear group, a device for counter parkinson-caused hand trmors" class="img_responsive"/>
                                 </div>
                             </div>
                         </div>
                         <!--hr-->
                     </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <!--div class="icon "></div-->
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><a href="#"></a></h3>
+                                <p>Estas tecnologías consisten en la integración de elementos electrónicos en nuestro ambiente cotidiano de tal forma que nos permitan complementar o mantener nuestra calidad de vida. Dichos elementos podríamos llevarlos puestos sobre el cuerpo o en nuestra ropa (wearables) o bien ser elementos de asistencia mecánica, como robots o elevadores.</p>
+                                <div>
+                                    <img src="images/img-parkinsons-wearable-test.jpg" alt="Intel and the Michael J. Fox Foundation are using big data, cloud computing and wearable technologies to monitor Parkinson’s patients." title="Intel and the Michael J. Fox Foundation are using big data, cloud computing and wearable technologies to monitor Parkinson’s patients." class="img_responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <br/>
+                <h3>Estas tecnologías ayudan en el corto plazo, pero no son <b>la solución perfecta</b></h3>
+                <ul class="row product-list">
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <img src="images/img-warning-sign.png" width="100" height="100" alt="Warning sign by DynV" tilte="Warning sign by DynV"/>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Desarrollo demasiado caro</span></h3>
+                                <p>Un producto empieza por una idea que se prototipa en laboratorio. Luego se trabaja con voluntarios o personas a las que se les compensa de alguna manera el esfuerzo. De esta experiencia, se aprende y se rediseña el producto. Después se planifica y ejecuta la producción industrial. Sólo queda llevar el producto al cliente final. En todo este proceso, hay un gasto ingente de recursos materiales y humanos. No todo el mundo puede afrontarlo.</p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <img src="images/img-warning-sign.png" width="100px" height="100px" alt="Warning sign by DynV" tilte="Warning sign by DynV"/>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>No es sencillo involucrar a las personas</span></h3>
+                                <p>Muchos proyectos fracasan por no proponer una solución de interés para las personas que los usarán. Para evitar esa frustración, se está integrando a voluntarios en la creación de los productos. Ello encarece más el producto, ya que requiere de instalaciones donde hacer las pruebas y de compensaciones para los voluntarios por el esfuerzo realizado. Aparte, plantea nuevas cuestiones. Imaginemos que construimos un detector de caídas: ¿pediremos al voluntario que se caiga?, ¿detectará el producto una caída por una escalera?...</p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <img src="images/img-warning-sign.png" width="100px" height="100px" alt="Warning sign by DynV" tilte="Warning sign by DynV"/>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Las tecnologías no están todavía listas</span></h3>
+                                <p>Los ensayos son lentos porque hay que garantizar fiabilidad. Además, gran parte de lo que se necesita implica asistencia mecánica, por ejemplo, cuando alguien se cae, para que le ayude a levantarse.</p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <img src="images/img-warning-sign.png" width="100px" height="100px" alt="Warning sign by DynV" tilte="Warning sign by DynV"/>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Falta de personalización</span></h3>
+                                <p>Cada persona es un mundo. Ajustar la tecnología asistiva a su caso particular es un proceso costoso. Los modelos industriales se rigen por la producción en escala de productos totalmente iguales. Cuando se trata de colectivos pequeños, o relativamente pequeños, no se pueden producir medios de precio asequible ajustados al problema de cada uno.</p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
         <section class="well1">
+            <div class="container"><h2>¿Qué proponemos?</h2></div>
+        </section>
+        <section>
+            <div class="container banner_wr">
+                <h2></h2>
+                <ul class="banner">
+                    <li>
+                        <p>Queremos que cualquier persona que tenga conocimientos pueda contribuir.</p>
+                        <p>
+                            <img src="images/img-hwa-a.png" alt=" UC Davis Steel Bridge Team | by UC Davis College of Engineering" title=" UC Davis Steel Bridge Team | by UC Davis College of Engineering" class="img_responsive"/>
+                        </p>
+                        <!--a href="#"></a-->
+                    </li>
+                    <li>
+                        <p>Abaratar costes para que no sea un impedimento el no disponer de muchos recursos.</p>
+                        <p>
+                            <img src="images/img-hwa-b.png" alt="LadyDIY" title="LadyDIY" class="img_responsive"/>
+                        </p>
+                        <!--a href="#"></a-->
+                    </li>
+                    <li>
+                        <p>Romper las limitaciones y hablar de lo que no existe todavía y cómo queremos que sea.</p>
+                        <p>
+                            <img src="images/img-hwa-c.png" alt="pixel1" title="pixel1" class="img_responsive"/>
+                        </p>
+                        <!--a href="#"></a-->
+                    </li>
+                    <li>
+                        <p>Sistematizar el desarrollo y estandarizar una experimentación responsable en tecnologías asistivas.</p>
+                        <p>
+                            <img src="images/img-hwa-d.png" class="img_responsive" alt="neetalparekh Sustainability graphic on Performance.gov" title="neetalparekh Sustainability graphic on Performance.gov"/>
+                        </p>
+                        <!--a href="#"></a-->
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container banner_wr">
+                <h2>No usamos magia, sólo ingeniería</h2>
+                <ul class="marked-list">
+                    <li>
+                        <p>Podemos usar simulaciones 3D de los problemas y resolver primero el problema en el ordenador.<a href="#"></a> </p>
+                    </li>
+                    <li>
+                        <p>Estamos empezando, pero ya tenemos casos que muestran la idea.<a href="#"></a></p>
+                    </li>
+                    <li>
+                        <p>Una tecnología libre y abierta que todos pueden usar. Si tu fuerte no es la tecnología, también puedes participar enviándonos comentarios de las simulaciones con el CAMAssistant.<a href="#"></a></p>
+                    </li>
+                    <li>
+                        <p>Si tienes conocimientos tecnológicos, puedes contribuir modelando o desarrollando soluciones. Si te faltan conocomientos tecnológicos, nos puedes ayudar dándonos comentarios a los casos prácticos con el CAMAssistant.<a href="#"></a></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="container banner_wr">
+                <h2>Formas de colaborar</h2>
+                <ul class="marked-list">
+                    <li>
+                        <p>Ayudar con comentarios sobre las simulaciones que tenemos, opinando sobre las soluciones y los problemas que hemos recogido. Se usa la herramienta CAMAssistant para esto. Pueden visitarse los casos de uso y proveer comentarios directamente.<a href="#"></a></p>
+                        <p>Perfil: profesional/persona con interés</p>
+                    </li>
+                    <li>
+                        <p>Crear modelos 3D con nuestras herramientas. Se usa la <a href="http://grasia.fdi.ucm.es/aide">herramienta AIDE para esto</a>. Dispondremos online los modelos para que los interesados los descarguen y también para que se puedan subir nuevos.<a href="#"></a></p>
+                        <p>Perfil: requiere conocimientos técnicos</p>
+                    </li>
+                    <li>
+                        <p>Colaboraren equipos multidisciplinares mientras se modela. Organizaremos reuniones para co-crear soluciones o estudiar problemas de forma colaborativa.<a href="#"></a></p>
+                        <p>Perfil: profesional/persona con interés </p>
+                    </li>
+                    <li>
+                        <p>Proponer soluciones para los problemas. Se usa la  <a href="http://grasia.fdi.ucm.es/aide">herramienta AIDE para esto</a>. Disponemos de ejemplos simples y tutoriales con los que empezar. </p>
+                        <p>Perfil: requiere conocimientos técnicos</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr/>
+        <section>
+            <div class="wrap_card">
+                <div id="showcase" class="noselect">
+                    <div class="card">
+                        <h2>Paso 5</h2>
+                        <img src="images/img-carrousel-c5.bmp">
+                        <p>Una vez que sabemos lo que se quiere construir, usamos elementos electrónicos asequibles para montar prototipos que puedan probar voluntarios. A diferencia de otros enfoques, cuando llegamos a aquí: no hemos invertido recursos físicos más allá de nuestro esfuerzo y nuestros ordenadores (que ya teníamos), hemos cooperado con profesionales y usuarios para determinar que vamos por el buen camino, hemos respetado la privacidad e integridad de los usuarios sin que ello comprometa el proyecto.</p>
+                        <a href="#"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Paso 4</h2>
+                        <img src="images/img-carrousel-c4.bmp">
+                        <p>El resultado final se vuelve a comentar para determinar si lo que los tecnólogos crearon encaja con lo que se esperaba.</p>
+                        <a href="#"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Paso 3</h2>
+                        <img src="images/img-carrousel-c3.bmp">
+                        <p>Ahorramos costes creando prototipos primero en el ordenador. Su funcionamiento se compara con el esperado por los profesionales y personas interesadas. El resultado se traslada en forma de vídeo para que se compruebe otra vez.</p>
+                        <a href="#"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Paso 2</h2>
+                        <img src="images/img-carrousel-c2.bmp">
+                        <p>Los comunicación se canaliza mediante una herramienta de comentarios similar a las herramientas que se usan para poner subtítulos a las películas. Aquí se modelan qué comportamiento se espera de los actores en un escenario ideal y luego se procede a definir cómo cada acción se ve alterada por las discapacidades o las enfermedades.</p>
+                        <a href="#"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Paso 1</h2>
+                        <img src="images/img-carrousel-c1.bmp">
+                        <p>Se colabora con profesionales y especialistas para intentar reproducir en simulaciones de ordenador lo que que cuentan.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <button class="nav_card noselect left_card">&lt;</button>
+                <button class="nav_card noselect right_card">&gt;</button>
+            </div>
+        </section>
+        <hr/>
+        <!--section>
+            <div class="container">
+                <div class="micarrousel">
+                    <div align="center">
+                        <img src="images/img-carrousel-c3.bmp" alt="Ciclo 3" />
+                        <p>Ahorramos costes creando prototipos primero en el ordenador. Su funcionamiento se compara con el esperado por los profesionales y personas interesadas. El resultado se traslada en forma de vídeo para que se compruebe otra vez.</p>
+                    </div>
+                    <div align="center">
+                        <img src="images/img-carrousel-c4.bmp" alt="Ciclo 4" />
+                        <p>El resultado final se vuelve a comentar para determinar si lo que los tecnólogos crearon encaja con lo que se esperaba..</p>
+                    </div>
+                    <div align="center">
+                        <img src="images/img-carrousel-c5.bmp" alt="Ciclo 5" />
+                        <p>Una vez que sabemos lo que se quiere construir, usamos elementos electrónicos asequibles para montar prototipos que puedan probar voluntarios. A diferencia de otros enfoques, cuando llegamos a aquí: no hemos invertido recursos físicos más allá de nuestro esfuerzo y nuestros ordenadores (que ya teníamos), hemos cooperado con profesionales y usuarios para determinar que vamos por el buen camino, hemos respetado la privacidad e integridad de los usuarios sin que ello comprometa el proyecto.</p>
+                    </div>
+                    <div align="center">
+                        <img src="images/img-carrousel-c1.bmp" alt="Ciclo 1" />
+                        <p>Se colabora con profesionales y especialistas para intentar reproducir en simulaciones de ordenador lo que que cuentan.</p>
+
+                    </div>
+                    <div align="center">
+                        <img src="images/img-carrousel-c2.bmp" alt="Ciclo 2" />
+                        <p>Los comunicación se canaliza mediante una herramienta de comentarios similar a las herramientas que se usan para poner subtítulos a las películas. Aquí se modelan qué comportamiento se espera de los actores en un escenario ideal y luego se procede a definir cómo cada acción se ve alterada por las discapacidades o las enfermedades.</p>
+                    </div>
+                </div>
+            </div>
+        </section-->
+
+        <section class="well ins1">
+            <div class="container hr">
+                <h2>Desarrollos terminados</h2>
+                <ul class="row product-list">
+                    <li class="grid_6">
+                        <div data-wow-delay="0.2s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Un detector de caídas</span></h3>
+                                <p>Fue desarrollado por estudiantes y la tecnología utilizada sirvió para facilitar el prototipado inicial de la solución. Está disponible toda la documentación que informa de los elementos necesarios para el desarrollo y así poder construir otro similar.</p>
+                                <div>
+                                    <img src="images/cajacaidas.png" class="img_responsive"/> <img src="images/probandocaja.jpg" class="img_responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--hr-->
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Prototipos de reconocedores de situaciones</span></h3>
+                                <p>Un reconocedor de gestos básico (su evolución está en proceso de patente) y un detector de caídas en grandes instalaciones. Desarrollado usando las simulaciones y producido con hardware abierto. Obtuvo el premio a la mejor DEMO patrocinado por <a href="http://www.paams.net/" target="_blank">IBM en la conferencia PAAMS 2016</a>.</p>
+                                <div>
+                                    <img src="images/img-grants-2016-1.jpg" class="img_responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="well ins1">
+            <div class="container hr">
+                <h2>Algunos desarrollos en progreso</h2>
+                <ul class="row product-list">
+                    <li class="grid_6">
+                        <div data-wow-delay="0.2s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <div class="icon "></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Mando de televisión tolerante a temblores leves</span></h3>
+                                <p>Se trata de definir cómo sería el control de un mándo de televisión táctil que fuera tolerante a temblores leves del usuario.</p><br/>
+                                <div>
+                                    <img src="images/img-parkinson-watching-tv.png" class="img_responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <div class="icon "></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Monitor de actividades repetidas u olvidadas</span></h3>
+                                <p>Basado en tecnología para reconocimiento de actividades, se quiere desarrollar un sistema que aprenda las costumbres del paciente y que identifique cuándo una actividad ya ha sido realizada, o no ha sido realizada, o cuando ha sido dejada a medias.</p>
+                                <div>
+                                    <img src="images/img-olv-object.png" class="img_responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--hr-->
+                    </li>
+                    <li class="grid_6">
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <div class="icon "></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <h3><span>Seguimiento de multitudes</span></h3>
+                                <p>Se trata de, usando información de tráfico de gente en un punto concreto de un edificio, determinar cuánta gente hay en otras partes del mismo sin necesidad de invadir la privacidad.</p>
+                                <div>
+                                    <img src="images/img-flujo-multitudes-2.png" class="img_responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-wow-delay="0.3s" class="box wow fadeInRight">
+                            <div class="box_aside">
+                                <!--div class="icon "></div-->
+                            </div>
+                            <div class="box_cnt__no-flow center">
+                                <h3></h3>
+                                <p><a href="casos_practicos.html" class="btn2">Ver más casos</a></p>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="well1">
             <div class="container">
                 <div class="row">
-                    <div class="grid_4">
-                        <h2>CAM Assistant</h2><img src="images/img-camera-cam-assistant.bmp" alt="">
-                        <p>CAM Assistant es la aplicación Web colaborativa que permite a diferentes expertos
-                            participar en el estudio y an&aacute;lisis de las simulaciones de cada caso de estudio.
-                            Según el caso de estudio se gener&aacute; uno o varios vídeos que respresentarán una
-                            perspectiva o c&aacute;mara del escenario construido.</p>
-                        <a href="participa.html" class="btn">Ver m&aacute;s</a>
-                    </div>
-                    <div class="grid_4">
-                        <h2>Proyectos Multidisciplinarios</h2>
-                        <p>Si eres experto o trabajas en áreas de las Ciencias Sociales o Ciencias de la Salud y
-                            consideras que puedes utilizar las simulaciones de comportamiento en algun caso de estudio
-                            de tu investigaci&oacute;n o sencillamente deseas colaborar en proyectos cuyos casos de uso
-                            se pueden estudiar utilizando este tipo de simulaciones puedes hacerlo con nosotros.</p>
-                        <p>Estas son algunas posibles ideas de proyecto:</p>
-                        <ul class="marked-list">
-                            <li><a href="#">Simulaci&oacute;n de comportamiento de personas con ceguera</a></li>
-                            <li><a href="#">Simulaci&oacute;n de Parkinson en partes concretas del cuerpo</a></li>
-                            <li><a href="#">Simulaci&oacute;n de pacientes con par&aacute;lisis cerebral</a></li>
-                            <li><a href="#">Simulaci&oacute;n de pacientes con Alzh&eacute;imer</a></li>
-                            <li><a href="#">Simulaci&oacute;n de movilidad reducida por efectos del alcohol</a></li>
-                        </ul>
-                        <a href="about.html" class="btn">Ver m&aacute;s</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="info-box">
-                            <h2 class="fa-comment">Cont&aacute;ctanos</h2>
-                            <hr>
-                            <h3>Facultad de Inform&aacute;tica</h3>
-                            <dl>
-                                <dt>Lunes - Viernes:</dt>
-                                <dd>9:00-17:00</dd>
-                            </dl>
-                            <dl>
-                                <dt>Despachos:</dt>
-                                <dd>437, 411</dd>
-                            </dl>
-                            <dl>
-                                <dt>Tel&eacute;fonos:</dt>
-                                <dd>+ 34 91 394 7644</dd>
-                            </dl>
-                            <hr>
-                            <h3>Soporte:</h3>
-                            <dl>
-                                <dt>IP:</dt>
-                                <dd>jjgomez@sip.ucm.es</dd>
-                            </dl>
+                    <div class="grid_6">
+                        <h2></h2>
+                        <div class="copyright">
+                            <a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL. </a>&nbsp;Proyecto financiado por el Ministerio de Economía y Competitividad del Gobierno de España, TIN2014-57028-R FOTRRIS. <br/>
+                            <a href="https://www.gsi.dit.upm.es/mosi/" target="_blank">MOSI-AGIL</a>. El programa MOSI-AGIL-CM (S2013/ICE-3019) está financiado por el Gobierno de la Comunidad de Madrid y fondos estructurales FEDER.<br/>
+                            <a href="http://fotrris-h2020.eu/" target="_blank">FoTRRIS</a> is an European Research Project of the H2020 Programme, on Responsible Research and Innovation. More information at <a href="http://fotrris-h2020.eu/" target="_blank">http://fotrris-h2020.eu/</a><br/>
+                            <a href="http://grasia.fdi.ucm.es/newmain/language/en/" target="_blank">GRASIA</a>&nbsp;&nbsp;
+                            <a rel="nofollow" href="http://www.ucm.es" target="_blank">Facultad de Inform&aacute;tica</a>
+                            <br/>
+                            All the content of this page is licensed under the CC By-SA <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/es/" target="_blank"><img src="http://i.creativecommons.org/l/by-sa/3.0/es/80x15.png" alt="(cc) BY-SA icon" title="(cc) BY-SA icon" style="border-width: 0; text-align: inherit; vertical-align: middle" /></a>
                         </div>
+
+                    </div>
+                    <div class="grid_2">
+                        <div>
+                            <p>
+                                <a href="http://cursos.dabne.net/grassia/language/en" target="_blank">
+                                    <img src="images/logo_grasia.jpg" height="35" width="133" title="Web GRASIA" alt="Web GRASIA" class="img_responsive"/>
+                                </a>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <a href="http://www.madrid.org" target="_blank">
+                                    <img src="images/img-logo-comunidad-madrid.jpg"  title="Comunidad de Madrid" alt="Comunidad de Madrid" class="img_responsive"/>
+                                </a>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <a rel="license" href="http://www.mineco.gob.es/" target="_blank">
+                                    <img src="images/gobspain.png" height="70" width="266" alt="Gobierno de España" style="border: none" class="img_responsive"/></a>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <img src="images/img-logo-ue.png"  title="UE" alt="UE" class="img_responsive"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid_4">
                         <div class="owl-carousel">
                             <div class="item">
                                 <blockquote class="box">
-                                    <div class="box_aside"><img src="images/img-pavon-mestras.jpeg" alt=""></div>
+                                    <div class="box_aside"><img src="images/img-t-pavon-mestras.jpeg" alt="Juan Pavón" class="img_responsive"></div>
                                     <div class="box_cnt__no-flow">
-                                        <p>
+                                        <p>Juan Pavón Mestras<br/>
                                             <q>He joined UCM at the end of 1997, where he created the GRASIA research
                                                 group, whose focus is on the application of multi-agent systems
                                                 technology.</q>
                                         </p>
-                                        <cite><a href="#">Co-director GRASIA</a></cite>
+                                        <cite>Co-director GRASIA</cite>
                                     </div>
                                 </blockquote>
                             </div>
                             <div class="item">
                                 <blockquote class="box">
-                                    <div class="box_aside"><img src="images/img-jjgomez.jpeg" alt=""></div>
+                                    <div class="box_aside"><img src="images/img-t-jorge-gomez.jpg" alt="Jorge Gómez" class="img_responsive"></div>
                                     <div class="box_cnt__no-flow">
-                                        <p>
+                                        <p>Jorge Gómez Sanz<br/>
                                             <q>His PhD introduced the INGENIAS methodology for the development of
                                                 Multi-Agent systems, which has been widely cited. He is the co-director
                                                 of the GRASIA research group.</q>
                                         </p>
-                                        <cite><a href="#">Co-director GRASIA</a></cite>
+                                        <cite>Co-director GRASIA</cite>
                                     </div>
                                 </blockquote>
                             </div>
                             <div class="item">
                                 <blockquote class="box">
-                                    <div class="box_aside"><img src="images/img-marlon-cardenas.jpg" alt=""></div>
+                                    <div class="box_aside"><img src="images/img-t-marlon-cardenas.jpg" alt="" class="img_responsive"></div>
                                     <div class="box_cnt__no-flow">
-                                        <p>
-                                            <q>Is a PhD student with a FPI contract associated with ColoSAAL project, he
-                                                joined GRASIA in January 2016, conducts investigations based in the
-                                                field of Ambient Assisted Living (AAL)</q>
+                                        <p>Marlon Cárdenas<br/>
+                                            <q>Estudiante de doctorado con un contrato FPI asociado al proyecto ColoSAAL.</q>
                                         </p>
-                                        <cite><a href="#">Assistant Research GRASIA</a></cite>
+                                        <cite>Miembro de GRASIA</cite>
                                     </div>
                                 </blockquote>
                             </div>
                             <div class="item">
                                 <blockquote class="box">
-                                    <div class="box_aside"><img src="images/img-rafael-pax.jpg" alt=""></div>
+                                    <div class="box_aside"><img src="images/img-t-rafael-pax.jpg" alt="" class="img_responsive"></div>
                                     <div class="box_cnt__no-flow">
-                                        <p>
-                                            <q>Is currently working at Universidad Complutense of Madrid (UCM) in the
-                                                project MOSI-AGIL, while studing a M.Sc degree in the same
-                                                university.</q>
+                                        <p>Rafael Pax<br/>
+                                            <q>Actualmente trabaja en la Universidad Complutense de Madrid (UCM) en el proyecto MOSI-AGIL.</q>
                                         </p>
-                                        <cite><a href="#">Assistant Research GRASIA</a></cite>
+                                        <cite>Miembro de GRASIA</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><img src="images/img-t-andres-arias-astray.jpg" alt="" class="img_responsive"></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>Andres Arias Astray<br/>
+                                            <q>Actualmente trabaja en la Universidad Complutense de Madrid (UCM).</q>
+                                        </p>
+                                        <cite>Facultad de Trabajo Social de la UCM</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><img src="images/img-t-gracia-escalante-ruiz.jpg" alt="" class="img_responsive"></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>Gracia Escalante Ruíz<br/>
+                                            <q>Actualmente trabaja en la Universidad Complutense de Madrid (UCM).</q>
+                                        </p>
+                                        <cite>Facultad de Trabajo Social de la UCM</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><img src="images/img-t-linda-ducca-cisneros.jpg" alt="" class="img_responsive"></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>Linda Ducca Cisneros<br/>
+                                            <q>Actualmente trabaja en la Universidad Complutense de Madrid (UCM).</q>
+                                        </p>
+                                        <cite>Facultad de Trabajo Social de la UCM</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><img src="images/img-t-silvia-patricia-cury.jpg" alt="" class="img_responsive"></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>Silvia Patricia Cury<br/>
+                                            <q>Actualmente trabaja en la Universidad Complutense de Madrid (UCM).</q>
+                                        </p>
+                                        <cite>Universidad Internacional de la Rioja</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote class="box">
+                                    <div class="box_aside"><img src="images/img-t-millan-arroyo-menendez.jpg" alt="" class="img_responsive"></div>
+                                    <div class="box_cnt__no-flow">
+                                        <p>Millán Arroyo Menéndez<br/>
+                                            <q>Profesor Titular de la Universidad Complutense de Madrid, Vicedecano de Investigación y Doctorado.</q>
+                                        </p>
+                                        <cite>Miembro de GRASIA</cite>
                                     </div>
                                 </blockquote>
                             </div>
@@ -286,7 +605,92 @@
     </main>
 
     <!-- FOOTER -->
-    <div id="footer-include" w3-include-html="section/footer.html"></div>
+    <!--
+    ========================================================
+                              PIE
+    ========================================================
+    -->
+    <footer>
+        <section class="well3">
+            <div class="container">
+                <ul class="row contact-list">
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-map-marker"></div>
+                            </div>
+                            <div class="box_cnt__no-flow">
+                                <address>Calle Profesor Jos&eacute; Garc&iacute;a Santesmases, 9<br/> 28040 Madrid</address>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-envelope"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">grasia@ucm.es</a></div>
+                        </div>
+                    </li>
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-phone"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7501</a></div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-fax"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7599</a></div>
+                        </div>
+                    </li>
+                    <li class="grid_4">
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-facebook"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="https://es-es.facebook.com/UniComplutense/" target="_blank">facebook</a></div>
+                        </div>
+                        <div class="box">
+                            <div class="box_aside">
+                                <div class="icon2 fa-twitter"></div>
+                            </div>
+                            <div class="box_cnt__no-flow"><a href="https://twitter.com/unicomplutense?lang=es" target="_blank">Twitter</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="copyright">UCM © Universidad Complutense de Madrid&nbsp;<span id="copyright-year"></span>.&nbsp;&nbsp;
+                    <a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL.</a>&nbsp;Financiado por el Ministerio de Economía y Competitividad del Gobierno de España, TIN2014-57028-R FOTRRIS.<br/>
+                    MOSI-AGIL. El programa MOSI-AGIL-CM (S2013/ICE-3019) está financiado por el Gobierno de la Comunidad de Madrid y fondos estructurales FEDER.<br/>
+                    <a href="http://grasia.fdi.ucm.es/newmain/language/en/" target="_blank">GRASIA</a>&nbsp;&nbsp;
+                    <a rel="nofollow" href="http://www.ucm.es" target="_blank">Facultad de Inform&aacute;tica</a>
+                </div>
+            </div>
+            <!-- Piwik -->
+            <script type="text/javascript">
+                var _paq = _paq || [];
+                _paq.push(["setDomains", ["*.grasia.fdi.ucm.es/hack4people","*.grasia.fdi.ucm.es/hack4people"]]);
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+                (function() {
+                    var u="//grasia.fdi.ucm.es/grasiastats/";
+                    _paq.push(['setTrackerUrl', u+'piwik.php']);
+                    _paq.push(['setSiteId', 25]);
+                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+                })();
+            </script>
+            <noscript><p><img src="//grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=25" style="border:0;" alt="" /></p></noscript>
+            <!-- End Piwik Code -->
+            <!-- Piwik Image Tracker-->
+            <img src="http://grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=21&rec=1" style="border:0" alt="" />
+            <!-- End Piwik -->
+        </section>
+    </footer>
 </div>
 <script src="js/script.js"></script> <!-- !Important -->
 <script src="js/w3data.js"></script> <!-- !Important -->

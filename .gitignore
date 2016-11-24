@@ -92,8 +92,5 @@ ENV/
 .idea
 old
 case/*.zip
-
-case/*.mp4
-case/*.mkv
-videos/*.mp4
-case/*/videos/*.mp4
+*.mp4
+*.mkv

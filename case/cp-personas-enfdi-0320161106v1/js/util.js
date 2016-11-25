@@ -101,7 +101,7 @@ function getDefaultComments(){
             ]
         },
         "cam-2": {
-            "_id": "CP000003-CAM1-VI02_20161015",
+            "_id": "CP000003-CAM2-VI02_20161015",
             "records": "1",
             "total": "1",
             "rows": [
@@ -125,7 +125,7 @@ function getDefaultComments(){
             ]
         },
         "cam-3": {
-            "_id": "CP000003-CAM1-VI03_20161015",
+            "_id": "CP000003-CAM3-VI03_20161015",
             "records": "1",
             "total": "1",
             "rows": [
@@ -149,7 +149,7 @@ function getDefaultComments(){
             ]
         },
         "cam-4": {
-            "_id": "CP000003-CAM1-VI04_20161015",
+            "_id": "CP000003-CAM4-VI04_20161015",
             "records": "1",
             "total": "1",
             "rows": [
@@ -175,4 +175,22 @@ function getDefaultComments(){
     }
 
     return def_comment;
+}
+
+
+/**
+ * Function isNumeric for validate input field numeric.
+ * @param elem
+ * @param helperMsg
+ * @returns {boolean}
+ */
+function isNumeric(elem, helperMsg){
+    var numericExpression = /^[0-9]+$/;
+    if(elem.value.match(numericExpression)){
+        return true;
+    }else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+    }
 }

@@ -856,11 +856,11 @@ table tr:nth-child(even) {
   position: relative;
   float: left;
 }
-.sf-menu a {
+.sf-menu a, .sf-menu dd {
   display: block;
 }
 
-.sf-menu > li > a {
+.sf-menu > li > a, .sf-menu > li > dd {
   padding: 22px 30px;
   color: #fff;
   font-size: 16px;
@@ -869,12 +869,17 @@ table tr:nth-child(even) {
   text-transform: uppercase;
   border-right: 1px solid #56585a;
 }
-.sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
+
+.sf_menu > li > dd {
+  padding: 10px  30px; !important;
+}
+
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li > dd:hover {
   color: #fff;
   background: #5ab7de;
   border-right: 1px solid #4bb0db;
 }
-.sf-menu > li.active > a {
+.sf-menu > li.active > a, .sf-menu > li.active > dd {
   color: #fff;
   background: #5ab7de;
   border-right: 1px solid #4bb0db;
@@ -895,7 +900,7 @@ table tr:nth-child(even) {
 .sf-menu ul > li {
   position: relative;
 }
-.sf-menu ul > li > a {
+.sf-menu ul > li > a, .sf-menu ul > li > dd {
   font-size: 16px;
   padding: 11px 31px;
   color: #62bfe6;
@@ -1517,5 +1522,9 @@ footer .copyright a:hover {
   visibility: hidden;
 }
 #showcase img {
+  cursor: pointer;
+}
+
+.lang {
   cursor: pointer;
 }

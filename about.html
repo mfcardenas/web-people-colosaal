@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HackWithPeople - Somos</title>
+    <title data-i18n="title.about">HackWithPeople - Somos</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="about=si">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="css/owl-carousel.css">
     <link rel="stylesheet" href="css/mailform.css">
     <script src="js/jquery.js"></script>
+    <script src="js/i18next.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script>
     <!--[if lt IE 9]>
-        <html class="lt-ie9">
-        <div style="clear: both; text-align:center; position: relative;"><a
-                href="http://windows.microsoft.com/en-US/internet-explorer/.."><img
-                src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
-                alt="La versi&oacute;n de su navegador no est&aacute; actualizada. Para una mejor experiencia en este sitio web, le recomendamos que lo actualice."></a>
-        </div>
-        </html>
-        <script src="js/html5shiv.js"></script>
+    <html class="lt-ie9">
+    <div style="clear: both; text-align:center; position: relative;"><a
+            href="http://windows.microsoft.com/en-US/internet-explorer/.."><img
+            src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+            alt="La versi&oacute;n de su navegador no est&aacute; actualizada. Para una mejor experiencia en este sitio web, le recomendamos que lo actualice."></a>
+    </div>
+    </html>
+    <script src="js/html5shiv.js"></script>
     <![endif]-->
+    <script src="js/carousel.js"></script>
     <script src="js/device.min.js"></script>
 </head>
 <body>
@@ -34,22 +36,43 @@
     -->
     <header>
         <div class="container">
-            <div class="brand">
+            <div id="brand" class="brand">
                 <h1 class="brand_name"><a href="./"><img src="images/logo.png"/> HackWithPeople</a></h1>
-                <p class="brand_slogan">Tecnología con y para la gente</p>
+                <p class="brand_slogan" data-i18n="brand.subtitle">Tecnología con y para la gente</p>
             </div>
-            <!--a href="callto:#" class="fa-phone">&nbsp;</a-->
             <p>&nbsp;</p>
         </div>
         <div id="stuck_container" class="stuck_container">
-            <div class="container">
+            <div id="menu" class="container">
                 <nav class="nav">
                     <ul data-type="navbar" class="sf-menu">
-                        <li id="index"><a href="index.html">Inicio</a></li>
-                        <li id="about" class="active"><a href="about.html">Quiénes somos</a></li>
-                        <li id="casos_practicos"><a href="casos_practicos.html">Casos Pr&aacute;cticos</a></li>
-                        <li id="licencia"><a href="licence.html">Licencia</a></li>
-                        <li id="contactanos"><a href="contacta.html">Cont&aacute;ctanos</a></li>
+                        <li id="index_">
+                            <a href="index.html" data-i18n="menu.index">Inicio</a>
+                        </li>
+                        <li id="about_" class="active">
+                            <a href="about.html" data-i18n="menu.about">Quiénes somos</a>
+                        </li>
+                        <li id="casos_practicos_">
+                            <a href="casos_practicos.html" data-i18n="menu.casospracticos">Casos Pr&aacute;cticos</a>
+                        </li>
+                        <li id="licencia_">
+                            <a href="licence.html" data-i18n="menu.licencia">Licencia</a>
+                        </li>
+                        <li id="contactanos_">
+                            <a href="contacta.html" data-i18n="menu.contactanos">Cont&aacute;ctanos</a>
+                        </li>
+                        <li>
+                            <dd>
+                                <img class="lang" src="images/img_uk_b.png" title="Language English"
+                                     onclick="traslateLang('en');"/>
+                            </dd>
+                        </li>
+                        <li>
+                            <dd>
+                                <img class="lang" src="images/img_spain_a.png" title="Lenguaje Español"
+                                     onclick="traslateLang('es');"/>
+                            </dd>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -68,52 +91,81 @@
     ========================================================
     -->
     <main class="mobile-center">
-        <section class="well1 ins3">
-            <div class="container">
-                <h2>Qui&eacute;nes somos</h2>
-                <div class="row off1">
-                    <div class="grid_6">
-                        <h3></h3>
-                        <p>Hack4People es una iniciativa para combinar esfuerzos de expertos en el estudio y descubrimiento de tecnologías asistivas para mejorar la calidad de vida de la población. Se trata de buscar devolver autonomía a los que tienen alguna enfermedad que ha cambiado su vida. Se trata también de buscar formas de lograr una sociedad inclusiva, en la que tener una discapacidad no sea una desventaja. Sobre todo, se trata de hacer frente al problema del envejecimiento de la población dando asistencia en el hogar.</p>
-                        <p>Queremos lograr esto buscando la colaboración de expertos en tecnología y expertos en personas. Entre ambos, y usando herramientas informáticas, estamos construyendo simulaciones de lo que viven las personas y de cómo podemos ayudarlas.</p>
-                        <p>Esta idea ha sido promovida en el ámbito del proyecto ColosAAL TIN2014-57028-R del<a href="http://www.mineco.gob.es" target="_blank"> Ministerio de Economía y Competitividad</a>.</p>
-                        <hr>
-                        <h3>Cómo participar</h3>
-                        <div class="row">
-                            <div data-wow-delay="0.2s" class="grid_3 wow fadeInLeft"><img src="images/page-2_img01.jpg"
-                                                                                          alt=""></div>
-                            <div class="grid_3 wow fadeInLeft"><img src="images/page-2_img02.jpg" alt=""></div>
+        <div id="about">
+            <section class="well1 ins3">
+                <div class="container">
+                    <h2 data-i18n="about.title_1">Qui&eacute;nes somos</h2>
+                    <div class="row off1">
+                        <div class="grid_6">
+                            <h3></h3>
+                            <p data-i18n="about.content_1p1">Hack4People es una iniciativa para combinar esfuerzos de expertos en el estudio y descubrimiento de tecnologías asistivas para mejorar la calidad de vida de la población. Se trata de buscar devolver autonomía a los que tienen alguna enfermedad que ha cambiado su vida. Se trata también de buscar formas de lograr una sociedad inclusiva, en la que tener una discapacidad no sea una desventaja. Sobre todo, se trata de hacer frente al problema del envejecimiento de la población dando asistencia en el hogar.
+                            </p>
+                            <p data-i18n="about.content_1p2">
+                               Queremos lograr esto buscando la colaboración de expertos en tecnología y expertos en personas. Entre ambos, y usando herramientas informáticas, estamos construyendo simulaciones de lo que viven las personas y de cómo podemos ayudarlas.
+                            </p>
+                            <p>
+                                <mcb data-i18n="about.content_1p3">Esta idea ha sido promovida en el ámbito del proyecto ColosAAL TIN2014-57028-R del </mcb>
+                                <a href="http://www.mineco.gob.es" target="_blank"> Ministerio de Economía y Competitividad.</a>
+                            </p>
+                            <hr>
+                            <h3 data-i18n="about.title_3">Cómo participar</h3>
+                            <div class="row">
+                                <div data-wow-delay="0.2s" class="grid_3 wow fadeInLeft">
+                                    <img src="images/page-2_img01.jpg" alt=""></div>
+                                <div class="grid_3 wow fadeInLeft"><img src="images/page-2_img02.jpg" alt=""></div>
+                            </div>
+                            <p data-i18n="about.content_3p1">Se iran construyento simulaciones de casos prácticos sobre síntomas de la enfermedad.
+                                Cada caso práctico mostrará la situación cotidiana que vive el paciente con el síntoma
+                                escogido, por ejemplo: paciente con parkinson que procede a tomar sus alimentos. Esta
+                                simulación se pone a disposici&oacute;n de todos para que puedan participar no solo en
+                                la correcciones de la propia simulación sino en el análisis de la situación de este tipo
+                                de pacientes cuando desarrollan sus actividades diarias.
+                                Sobre cada simulación podrás realizar comentarios y, si lo prefieres, podr&aacute;s
+                                participar en las sesiones de trabajo que las crean. Tus ideas siempre serán útiles para
+                                contribuir a la mejora no solo de la simulación sino a su aplicación sobre un campo de
+                                estudio concreto.</p>
                         </div>
-                        <p>Se iran construyento simulaciones de casos prácticos sobre síntomas de la enfermedad. Cada caso práctico mostrará la situación cotidiana que vive el paciente con el síntoma escogido, por ejemplo: paciente con parkinson que procede a tomar sus alimentos. Esta simulación se pone a disposici&oacute;n de todos para que puedan participar no solo en la correcciones de la propia simulación sino en el análisis de la situación de este tipo de pacientes cuando desarrollan sus actividades diarias.
-                            Sobre cada simulación podrás realizar comentarios y, si lo prefieres, podr&aacute;s participar en las sesiones de trabajo que las crean. Tus ideas siempre serán útiles para contribuir a la mejora no solo de la simulación sino a su aplicación sobre un campo de estudio concreto.</p>
-                    </div>
-                    <div class="grid_6">
-                        <h3>Proyectos Actuales</h3>
-                        <div class="row">
-                            <div class="grid_2 wow fadeInRight">
-                                <img src="images/img_ceguera.jpg" alt="" title="'J' via Visual hunt / CC BY-NC">
-                                <img src="images/img_alzheimer.jpg" alt="" title="Hugo Bononi via Visualhunt.com / CC BY-NC-ND">
+                        <div class="grid_6">
+                            <h3 data-i18n="about.title_2">Proyectos Actuales</h3>
+                            <div class="row">
+                                <div class="grid_2 wow fadeInRight">
+                                    <img src="images/img_ceguera.jpg" alt="" title="'J' via Visual hunt / CC BY-NC">
+                                    <img src="images/img_alzheimer.jpg" alt=""
+                                         title="Hugo Bononi via Visualhunt.com / CC BY-NC-ND">
+                                </div>
+                                <div data-wow-delay="0.2s" class="grid_2 wow fadeInRight">
+                                    <img src="images/img_limitacion.jpg" alt=""
+                                         title="Xavier Trias via Visualhunt / CC BY-NC-ND">
+                                    <img src="images/img_pastillas.jpg" alt="">
+                                </div>
+                                <div data-wow-delay="0.4s" class="grid_2 wow fadeInRight">
+                                    <img src="images/img_cerebro.jpg" alt="" title="">
+                                    <img src="images/img_abuelo.jpg" alt="" title="">
+                                </div>
                             </div>
-                            <div data-wow-delay="0.2s" class="grid_2 wow fadeInRight">
-                                <img src="images/img_limitacion.jpg" alt="" title="Xavier Trias via Visualhunt / CC BY-NC-ND">
-                                <img src="images/img_pastillas.jpg" alt="" >
-                            </div>
-                            <div data-wow-delay="0.4s" class="grid_2 wow fadeInRight">
-                                <img src="images/img_cerebro.jpg" alt="" title="">
-                                <img src="images/img_abuelo.jpg" alt="" title="">
-                            </div>
+                            <p data-i18n="about.content_2p1">Las simulaciones de pacientes con limitaciones buscan mostrar los efectos de las
+                                discapacidades y su relación con el aparato cognitivo del usuario, reflejando además los
+                                efectos de las enfermedades estudiadas a más bajo nivel para deducir luego su impacto en
+                                las actividades diarias del paciente.</p>
+                            <p data-i18n="about.content_2p2">Los proyectos actuales abarcan enfermedades como Alzh&eacute;imer, Parkinson, Ceguera y
+                                Parálisis. Para todas estas iniciativas es indispensable contar con expertos en áreas de
+                                las ciencias Sociales y las ciencias de la Salud para garantizar la correcta ejecución
+                                de los casos de estudios propuestos.</p>
+                            <hr>
+                            <h3 data-i18n="about.title_4">Ventajas de la Simulación</h3>
+                            <p data-i18n="about.content_4p1">No es necesario que los colaboradores o expertos participantes conozcan las últimas
+                                técnicas de simulación por ordenador. Se pone a su disposición todo un conjunto de
+                                herramientas tecnológicas que, gracias al lenguaje modelado de alto nivel, podrá
+                                utilizar construir las diferentes simulaciones que se consideren pertinentes en los
+                                casos de estudios propuestos.</p>
+                            <p data-i18n="about.content_4p2">Es posible simular diferentes casos pr&aacute;cticos sin la necesidad de acudir a
+                                pacientes reales. Con todo lo analizado en estas sesiones de trabajo, será posible
+                                diseñar mecanismos que permitan mejorar el día a día de los pacientes.</p>
                         </div>
-                        <p>Las simulaciones de pacientes con limitaciones buscan mostrar los efectos de las discapacidades y su relación con el aparato cognitivo del usuario, reflejando además los efectos de las enfermedades estudiadas a más bajo nivel para deducir luego su impacto en las actividades diarias del paciente.</p>
-                        <p>Los proyectos actuales abarcan enfermedades como Alzh&eacute;imer, Parkinson, Ceguera y Parálisis. Para todas estas iniciativas es indispensable contar con expertos en áreas de las ciencias Sociales y las ciencias de la Salud para garantizar la correcta ejecución de los casos de estudios propuestos.</p>
-                        <hr>
-                        <h3>Ventajas de la Simulación</h3>
-                        <p>No es necesario que los colaboradores o expertos participantes conozcan las últimas técnicas de simulación por ordenador. Se pone a su disposición todo un conjunto de herramientas tecnológicas que, gracias al lenguaje modelado de alto nivel, podrá utilizar construir las diferentes simulaciones que se consideren pertinentes en los casos de estudios propuestos.</p>
-                        <p>Es posible simular diferentes casos pr&aacute;cticos sin la necesidad de acudir a pacientes reales. Con todo lo analizado en estas sesiones de trabajo, será posible diseñar mecanismos que permitan mejorar el día a día de los pacientes.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--section class="well1 ins3 bg-primary">
+            </section>
+            <!--section class="well1 ins3 bg-primary">
             <div class="container">
                 <a name="proyectos-multi"><h2>Proyectos Multidisciplinarios</h2></a>
                 <ul class="product-list row off1">
@@ -182,24 +234,33 @@
                 </ul>
             </div>
         </section-->
-        <section class="well1">
-            <div class="container">
-                <div class="row">
-                    <div class="grid_4">
-                        <h2>Cu&eacute;ntanos tu investigaci&oacute;n</h2>
-                        <p>Desde Hack4People se han propuesto varias línea de trabajo concretas pero eso no quiere decir que no querramos oir tus propuestas de investigación. Cu&eacute;ntanos tu trabajo y en una o m&aacute;s sesiones de trabajo podemos analizar la posibilidad de trabajar conjuntamente y obtener as&iacute; resultados favorables para todos.</p>
-                    </div>
-                    <div class="grid_4">
-                        <h2>Participa en proyectos multidisciplinario</h2>
-                        <p>Permite que otras áreas de la ciencia participen en tu investigación. Enriquece tu trabajo con el apoyo de otros profesionales o grupos de trabajo que a lo mejor, por su linea de investigación, podrían dar ese plus a tu proyecto y viceberza.</p>
-                    </div>
-                    <div class="grid_4">
-                        <h2>Diseñemos soluciones eficientes</h2>
-                        <p>La simulaciones de comportamientos realistas permiten generar ideas y construir soluciones para muchos pacientes. No es necesario experimentar con ellos directamente, participa en la simulación de su comportamiento, analiza el contexto de la actividad del paciente y juntos intentemos mejorar su estilo de vida de forma barata y eficiente.</p>
+            <section class="well1">
+                <div class="container">
+                    <div class="row">
+                        <div class="grid_4">
+                            <h2 data-i18n="about.title_5">Cu&eacute;ntanos tu investigaci&oacute;n</h2>
+                            <p data-i18n="about.content_5p1">Desde Hack4People se han propuesto varias línea de trabajo concretas pero eso no quiere
+                                decir que no querramos oir tus propuestas de investigación. Cu&eacute;ntanos tu trabajo
+                                y en una o m&aacute;s sesiones de trabajo podemos analizar la posibilidad de trabajar
+                                conjuntamente y obtener as&iacute; resultados favorables para todos.</p>
+                        </div>
+                        <div class="grid_4">
+                            <h2 data-i18n="about.title_6">Participa en proyectos multidisciplinario</h2>
+                            <p data-i18n="about.content_6p1">Permite que otras áreas de la ciencia participen en tu investigación. Enriquece tu
+                                trabajo con el apoyo de otros profesionales o grupos de trabajo que a lo mejor, por su
+                                linea de investigación, podrían dar ese plus a tu proyecto y viceberza.</p>
+                        </div>
+                        <div class="grid_4">
+                            <h2 data-i18n="about.title_7">Diseñemos soluciones eficientes</h2>
+                            <p data-i18n="about.content_7p1">La simulaciones de comportamientos realistas permiten generar ideas y construir
+                                soluciones para muchos pacientes. No es necesario experimentar con ellos directamente,
+                                participa en la simulación de su comportamiento, analiza el contexto de la actividad del
+                                paciente y juntos intentemos mejorar su estilo de vida de forma barata y eficiente.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!--
@@ -208,85 +269,98 @@
 ========================================================
 -->
     <footer>
-        <section class="well3">
-            <div class="container">
-                <ul class="row contact-list">
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-map-marker"></div>
+        <div id="footer">
+            <section class="well3">
+                <div class="container">
+                    <ul class="row contact-list">
+                        <li class="grid_4">
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-map-marker"></div>
+                                </div>
+                                <div class="box_cnt__no-flow">
+                                    <address>Calle Profesor Jos&eacute; Garc&iacute;a Santesmases, 9<br/> 28040 Madrid
+                                    </address>
+                                </div>
                             </div>
-                            <div class="box_cnt__no-flow">
-                                <address>Calle Profesor Jos&eacute; Garc&iacute;a Santesmases, 9<br/> 28040 Madrid</address>
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-envelope"></div>
+                                </div>
+                                <div class="box_cnt__no-flow"><a href="#">grasia@ucm.es</a></div>
                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-envelope"></div>
+                        </li>
+                        <li class="grid_4">
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-phone"></div>
+                                </div>
+                                <div class="box_cnt__no-flow"><a href="#">+34 91-394-7501</a></div>
                             </div>
-                            <div class="box_cnt__no-flow"><a href="#">grasia@ucm.es</a></div>
-                        </div>
-                    </li>
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-phone"></div>
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-fax"></div>
+                                </div>
+                                <div class="box_cnt__no-flow"><a href="#">+34 91-394-7599</a></div>
                             </div>
-                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7501</a></div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-fax"></div>
+                        </li>
+                        <li class="grid_4">
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-facebook"></div>
+                                </div>
+                                <div class="box_cnt__no-flow"><a href="https://es-es.facebook.com/UniComplutense/"
+                                                                 target="_blank">facebook</a></div>
                             </div>
-                            <div class="box_cnt__no-flow"><a href="#">+34 91-394-7599</a></div>
-                        </div>
-                    </li>
-                    <li class="grid_4">
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-facebook"></div>
+                            <div class="box">
+                                <div class="box_aside">
+                                    <div class="icon2 fa-twitter"></div>
+                                </div>
+                                <div class="box_cnt__no-flow"><a href="https://twitter.com/unicomplutense?lang=es"
+                                                                 target="_blank">Twitter</a></div>
                             </div>
-                            <div class="box_cnt__no-flow"><a href="https://es-es.facebook.com/UniComplutense/" target="_blank">facebook</a></div>
-                        </div>
-                        <div class="box">
-                            <div class="box_aside">
-                                <div class="icon2 fa-twitter"></div>
-                            </div>
-                            <div class="box_cnt__no-flow"><a href="https://twitter.com/unicomplutense?lang=es" target="_blank">Twitter</a></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="copyright">UCM © Universidad Complutense de Madrid&nbsp;<span id="copyright-year"></span>.&nbsp;&nbsp;
-                    <a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL.</a>&nbsp;Financiado por el Ministerio de Economía y Competitividad del Gobierno de España, TIN2014-57028-R FOTRRIS.<br/>
-                    MOSI-AGIL. El programa MOSI-AGIL-CM (S2013/ICE-3019) está financiado por el Gobierno de la Comunidad de Madrid y fondos estructurales FEDER.<br/>
-                    <a href="http://grasia.fdi.ucm.es/newmain/language/en/" target="_blank">GRASIA</a>&nbsp;&nbsp;
-                    <a rel="nofollow" href="http://www.ucm.es" target="_blank">Facultad de Inform&aacute;tica</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <!-- Piwik -->
-            <script type="text/javascript">
-                var _paq = _paq || [];
-                _paq.push(["setDomains", ["*.grasia.fdi.ucm.es/hack4people","*.grasia.fdi.ucm.es/hack4people"]]);
-                _paq.push(['trackPageView']);
-                _paq.push(['enableLinkTracking']);
-                (function() {
-                    var u="//grasia.fdi.ucm.es/grasiastats/";
-                    _paq.push(['setTrackerUrl', u+'piwik.php']);
-                    _paq.push(['setSiteId', 25]);
-                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-                })();
-            </script>
-            <noscript><p><img src="//grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=25" style="border:0;" alt="" /></p></noscript>
-            <!-- End Piwik Code -->
-            <!-- Piwik Image Tracker-->
-            <img src="http://grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=21&rec=1" style="border:0" alt="" />
-            <!-- End Piwik -->
-        </section>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="copyright">UCM © Universidad Complutense de Madrid&nbsp;<span
+                            id="copyright-year"></span>.&nbsp;&nbsp;
+                        <a href="http://grasia.fdi.ucm.es/colosaal" target="_blank">ColosAAL.</a>&nbsp;<mcb data-i18n="footer.financed_by">Financiado por el
+                        Ministerio de Economía y Competitividad del Gobierno de España, </mcb> TIN2014-57028-R FOTRRIS.<br/>
+                        MOSI-AGIL. El programa MOSI-AGIL-CM (S2013/ICE-3019) está financiado por el Gobierno de la
+                        Comunidad de Madrid y fondos estructurales FEDER.<br/>
+                        <a href="http://grasia.fdi.ucm.es/newmain/language/en/" target="_blank">GRASIA</a>&nbsp;&nbsp;
+                        <a rel="nofollow" href="http://www.ucm.es" target="_blank">Facultad de Inform&aacute;tica</a>
+                    </div>
+                </div>
+                <!-- Piwik -->
+                <script type="text/javascript">
+                    var _paq = _paq || [];
+                    _paq.push(["setDomains", ["*.grasia.fdi.ucm.es/hack4people", "*.grasia.fdi.ucm.es/hack4people"]]);
+                    _paq.push(['trackPageView']);
+                    _paq.push(['enableLinkTracking']);
+                    (function () {
+                        var u = "//grasia.fdi.ucm.es/grasiastats/";
+                        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                        _paq.push(['setSiteId', 25]);
+                        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                        g.type = 'text/javascript';
+                        g.async = true;
+                        g.defer = true;
+                        g.src = u + 'piwik.js';
+                        s.parentNode.insertBefore(g, s);
+                    })();
+                </script>
+                <noscript><p><img src="//grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=25" style="border:0;" alt=""/>
+                </p></noscript>
+                <!-- End Piwik Code -->
+                <!-- Piwik Image Tracker-->
+                <img src="http://grasia.fdi.ucm.es/grasiastats/piwik.php?idsite=21&rec=1" style="border:0" alt=""/>
+                <!-- End Piwik -->
+            </section>
+        </div>
     </footer>
 </div>
 <script src="js/script.js"></script>  <!-- !Important -->

@@ -144,6 +144,7 @@
     "content_11p1": "We simulate the behavior of crowds in big areas, such as the Faculty of Computer Science, to observe the flow of people in the different spaces of the facility.",
     "content_12p1": "We introduce a brief example of the use of the modelling tool to generate simulations. This version is conceive to be developed. It is possible to integrate it with Android components to increase its functionalities. Download the presentation and send your suggestions.",
     "comment_online": "Coment Online",
-    "comment_offline": "Coment Offline"
+    "comment_offline": "Coment Offline",
+    "rest_navigation": "* At the moment, online comments are only supported in the Mozilla Firefox browser.",
   }
 }

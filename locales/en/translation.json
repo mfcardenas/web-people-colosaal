@@ -134,6 +134,7 @@
     "title_10": "Students' entrance in the Faculty of Computer Science",
     "title_11": "Flow of crowds in big areas",
     "title_12": "Modelling tool for simulations",
+    "rest_navigation": "* At the moment, online comments are only supported in the Mozilla Firefox browser.",
     "content_2p1": "The daily activities can be affected by the sympthoms of the illness. In this case we study the example of a patient who suffer from difficulty in falling or staying asleep.",
     "content_3p1": "In this practical case we show a simulation of a patient with desorientation. What is defined in the simulation is the possibility of detecting that the patient has been more than 10 minutes outside a room between 0:00 and 8:00 am. When it happens, we indicate him/her the way to the bedroom by turning on the lights of the corredor and the bedroom.",
     "content_4p1": "Placing objects out of its place is other case study that can be simulated.  The loss of keys, the loss of TV remote control, the loss of medication...",

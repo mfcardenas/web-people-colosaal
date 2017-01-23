@@ -144,6 +144,7 @@
     "content_11p1": "Se simula el comportamiento de multitudes dentro de grandes superficies como es el caso de la Facultad de Informática, para observar el flujo de personas en las diferentes zonas del recinto.",
     "content_12p1": "Presentamos un breve ejemplo del uso de la herramienta de modelado para generar simulaciones. Esta versión es para desarrollo y es posible integrarla con componentes de Android para ampliar funcionalidades. Descarga la presentación y envia tus sugerencias.",
     "comment_online": "Comenta Online",
-    "comment_offline": "Comenta Offline"
+    "comment_offline": "Comenta Offline",
+    "rest_navigation": "* De momento, los comentarios online sólo se soportan en el navegador Firefox de Mozilla."
   }
 }

@@ -386,16 +386,18 @@
             </div>
             <div class="agile-bottom-grids">
                 <div class="col-md-2"></div>
-                <div class="col-md-8 agile-bottom-right">
+                <div class="col-md-8 agile-bottom-right wrapper">
                     <div class="agile-bottom-grid">
                         <div class="area-grids-heading heading-video">
                             <h3 class="active"><a data-toggle="collapse" href="#graph-1">Camera 1</a></h3>
                             <input type="hidden" id="id_cp" name="id_cp" value="CAMASSISTANT-CP000002" />
                             <input type="hidden" id="id_cam" name="id_cam" value="CP000002-CAM1-VI01-20161015" class="id_cams"/>
                         </div>
-                        <div id="graph-1" class="video-mc">
-                            <video id="Video1" preload="auto" class="responsive-video video-js vjs-default-skin" style="border: 1px solid green;" title="video element" width="975" height="636"
-                                   poster="images/fondo_viedeos.png" >
+                        <div id="graph-1" class="video-mc video-js-responsive-container vjs-hd">
+                            <video id="Video1" preload="auto" class="video-js vjs-default-skin" style="border: 1px solid green;" width="auto" height="auto"
+                                   poster="images/fondo_viedeos.png" 
+				   data-setup="{{'fluid': true}}"
+                                   title="Case Practical Comment Video" >
                                 HTML5 Video is required for this example
                             </video>
                         </div>
@@ -585,7 +587,8 @@
     var caption_data = JSOTRAGE.get_caption();
     var video1 = document.getElementById("Video1");
 
-    var video_1 = videojs('Video1');
+//    var video_1 = videojs('Video1');
+    var video_1 = videojs('Video1', { responsive: true });
 
     var json;
 
@@ -618,11 +621,11 @@
 
         $("#send-cancel").click(function () {
             $("#form-cam").toggle();
-        })
+        });
 
         $("#send-send").click(function () {
             getDataFormComment();
-        })
+        });
 
         if (video1.canPlayType) {
 

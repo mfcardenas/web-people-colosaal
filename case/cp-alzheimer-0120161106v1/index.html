@@ -446,12 +446,15 @@
                                 <div id="collapse1" class="panel-collapse collapse">
                                     <div class="demo-box">
                                         <ul class="demo-tool-buttons" id="tools_1">
-                                            <li>
-                                                Current time: <span class="text-video" id="curTime-tools" title="Current time"></span>
+                                            <li id="none1-tag-01" class="">
+                                                <img id="restart-min" src="images/refresh.png" height="22" width="22" alt="[]" title="Reload Video" class="tooltip_"/>
                                             </li>
-                                            <li id="none1-tag-01" class=""></li>
-                                            <li id="none2-tag-01" class=""></li>
-                                            <li id="none3-tag-01" class=""></li>
+                                            <li id="none2-tag-01" class="">
+                                                <img id="play-min" name="play-min" src="images/play-button.png" height="22" width="22" alt="&gt;" title="Play Video" class="tooltip_"/>
+                                            </li>
+                                            <li id="none3-tag-01" class="">
+
+                                            </li>
                                             <li id="increase-font-1" class="increase-font">
                                                 <img src="images/font_inc.png" width="22" height="22" alt="Zoom in Comments" title="Zoom in Comments" class="tooltip_"/>
                                             </li>
@@ -462,10 +465,12 @@
                                             <li id="none2-tag-1" class=""></li>
                                             <li id="none3-tag-1" class=""></li>
                                             <li id="none4-tag-1" class=""></li>
+                                            <li>
+                                                Current: <span class="text-video" id="curTime-tools" title="Current time"></span>
+                                            </li>
                                             <li id="add-tag-1" class="dynamic-demo-add-tag" style="align-self: flex-end;">
                                                 <img src="images/create_comment.png" width="30" height="30" title="Add Comment" alt="Add Comment" class="tooltip_"/>
                                             </li>
-
                                         </ul>
                                     </div>
                                     <div class="demo-box" role="group" aria-label="...">
@@ -672,7 +677,15 @@
                 loadVideos();
             });
 
+            $("#play-min").click(function(){
+                loadVideos();
+            });
+
             $("#restart").click(function(){
+                setTime(0);
+            });
+
+            $("#restart-min").click(function(){
                 setTime(0);
             });
 
@@ -734,10 +747,12 @@
 
             video1.addEventListener("pause", function () {
                 document.getElementById("play").innerHTML = "<img alt='&gl;' title='Play' src='images/play-button.png' height='22' width='22'/>";
+                document.getElementById("play-min").src = "images/play-button.png";
             }, false);
 
             video1.addEventListener("playing", function () {
                 document.getElementById("play").innerHTML = "<img alt='||' title='Pause' src='images/pause.png' height='22' width='22'/>";
+                document.getElementById("play-min").src = "images/pause.png";
             }, false);
 
             video1.addEventListener("volumechange", function () {
@@ -777,9 +792,11 @@
             if (video1.paused) {
                 playVideos();
                 document.getElementById("play").innerHTML = "<img alt='||' title='Pause' src='images/pause.png' height='22' width='22'/>";
+                document.getElementById("play-min").src = "images/pause.png";
             } else {
                 pauseVideos();
                 document.getElementById("play").innerHTML = "<img alt='&gl;' title='Play' src='images/play-button.png' height='22' width='22'/>";
+                document.getElementById("play-min").src = "images/play-button.png";
             }
         }
 
@@ -794,6 +811,7 @@
                 video1.load();
                 document.getElementById("buttonbar").style.display = "block";
                 document.getElementById("play").innerHTML = "<img alt='&gl;' title='Play' src='images/play-button.png' height='22' width='22'/>";
+                document.getElementById("play-min").src = "images/play-button.png";
                 loadSubtitle();
                 paintListAll();
             } else {

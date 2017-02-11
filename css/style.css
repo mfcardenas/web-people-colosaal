@@ -856,30 +856,27 @@ table tr:nth-child(even) {
   position: relative;
   float: left;
 }
-.sf-menu a, .sf-menu dd {
+.sf-menu a {
   display: block;
 }
 
-.sf-menu > li > a, .sf-menu > li > dd {
+.sf-menu > li > a {
   padding: 22px 30px;
   color: #fff;
   font-size: 16px;
-  line-height: 1;
+  /*line-height: 0;*/
   font-weight: 500;
   text-transform: uppercase;
   border-right: 1px solid #56585a;
 }
 
-.sf_menu > li > dd {
-  padding: 10px  30px; !important;
-}
 
-.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li > dd:hover {
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   color: #fff;
   background: #5ab7de;
   border-right: 1px solid #4bb0db;
 }
-.sf-menu > li.active > a, .sf-menu > li.active > dd {
+.sf-menu > li.active > a {
   color: #fff;
   background: #5ab7de;
   border-right: 1px solid #4bb0db;
@@ -900,7 +897,7 @@ table tr:nth-child(even) {
 .sf-menu ul > li {
   position: relative;
 }
-.sf-menu ul > li > a, .sf-menu ul > li > dd {
+.sf-menu ul > li > a {
   font-size: 16px;
   padding: 11px 31px;
   color: #62bfe6;

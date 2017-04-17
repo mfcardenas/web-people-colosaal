@@ -342,6 +342,20 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+            <div class="social grid">
+                <div class="grid-info">
+                    <div class="col-md-12">
+                        <div id="cam-title" class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Descripción del caso de estudio</h3>
+                            </div>
+                            <div class="panel-body">
+                                Se simula el comportamiento de multitudes dentro de grandes superficies como es el caso de la Facultad de Informática, para observar el flujo de personas en las diferentes zonas del recinto. A continuación se disponen de cuatro cámaras para observar el comportamiento de los individuos en diferentes lugares.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="form-cam" class="agile-bottom-grids" style="display: none;">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 agile-bottom-right">
@@ -360,12 +374,33 @@
                                     <div class="help-block with-errors"></div>
                                 </label>
                                 <label>
+                                    <select id="type_stude" name="type_stude" required>
+                                        <option value="">Tu formación es...</option>
+                                        <option value="BA">Bachillerato</option>
+                                        <option value="CU">Carrera Universitaria</option>
+                                        <option value="CS">Curso y/o Seminario</option>
+                                        <option value="DR">Doctorado</option>
+                                        <option value="FP">Formación profesional</option>
+                                        <option value="MP">Másters y/o Posgrados</option>
+                                        <option value="OE">Otros Estudios</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </label>
+                                <label>
+                                    <select id="considerate" name="considerate" required>
+                                        <option value="">Te parece interesante...</option>
+                                        <option value="S">Si, es interesante</option>
+                                        <option value="N">No, no lo veo relevante</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </label>
+                                <label>
                                     <input type="hidden" id="identifier_view" name="identifier_view" />
                                 </label>
                                 <label>
                                     <input required type="text" id="control" name="control" placeholder="4 dígitos:*" data-constraints="@Number"
-                                    title="Para prevenir spam, por favor indique cualquier número de 4 dígitos" size="8" maxlength="20"/>
-                                    <img src="images/img-question-gif.png" width="22" height="22" title="Para prevenir spam, por favor indique cualquier número de 4 dígitos"/>
+                                    title="Para prevenir el spam, por favor indique cualquier número de 4 dígitos" size="8" maxlength="20"/>
+                                    <img src="images/img-question-gif.png" width="22" height="22" title="Para prevenir el spam, por favor indique cualquier número de 4 dígitos"/>
                                     <div class="help-block with-errors"></div>
                                 </label>
                                 <label>
@@ -833,9 +868,11 @@
         var identifier = $("#identifier").val();
         var control = $("#control").val();
         var url = $("#url_identifier").val();
+        var considerate = $("#considerate").val();
+        var type_stude = $("#type_stude").val();
 
-        if (isNumeric(document.getElementById("control"), "¡Indique un valor númerico!")){
-            if (name != "" && identifier != "" && url != "") {
+        if (name != "" && identifier != "" && url != "" && considerate != "" && type_stude != "") {
+            if (isNumeric(document.getElementById("control"), "¡Indique un valor númerico!")) {
                 $("#url_identifier_data").val(url);
                 $("#identifier_data").val(identifier);
                 $("#json-str").val(JSON.stringify(caption_data));
@@ -853,11 +890,11 @@
                 $("#form_id_cam").val(id_cams);
 
                 document.getElementById('theForm').submit();
-                document.getElementById('success').innerHTML='Enviado.';
+                document.getElementById('success').innerHTML = 'Enviado.';
                 setTimeout("document.getElementById('form-cam').style.display = 'none';", 5000);
-            }else{
-                alert("¡Indique todos los campos obligatorios!");
             }
+        }else{
+            alert("¡Indique todos los campos obligatorios!");
         }
     }
 

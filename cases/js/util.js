@@ -89,3 +89,22 @@ function isNumeric(elem, helperMsg){
         return false;
     }
 }
+
+/**
+ * Function Style Title CP.
+ */
+function getStyleDescription(){
+    var style = {
+        "1": "panel panel-default",
+        "2": "panel panel-primary",
+        "3": "panel panel-success",
+        "4": "panel panel-info",
+        "5": "panel panel-warning",
+        "6": "panel panel-danger"
+    };
+    var key = Math.floor((Math.random() * 6) + 1);
+    var ele = $("#cam-title");
+    ele.removeClass();
+    ele.addClass(style[key]);
+}
+getStyleDescription();

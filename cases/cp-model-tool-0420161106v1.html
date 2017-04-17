@@ -55,7 +55,6 @@
 
     <script src="js/video.js" type="text/javascript"></script>
     <script src="js/videojs.caption.js" type="text/javascript"></script>
-
     <script src="js/skycons.js" type="text/javascript"></script>
     <script src="js/json2.js" type="text/javascript"></script>
     <script src="js/jstorage.js" type="text/javascript"></script>
@@ -356,12 +355,33 @@
                                     <div class="help-block with-errors"></div>
                                 </label>
                                 <label>
+                                    <select id="type_stude" name="type_stude" required>
+                                        <option value="">Tu formación es...</option>
+                                        <option value="BA">Bachillerato</option>
+                                        <option value="CU">Carrera Universitaria</option>
+                                        <option value="CS">Curso y/o Seminario</option>
+                                        <option value="DR">Doctorado</option>
+                                        <option value="FP">Formación profesional</option>
+                                        <option value="MP">Másters y/o Posgrados</option>
+                                        <option value="OE">Otros Estudios</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </label>
+                                <label>
+                                    <select id="considerate" name="considerate" required>
+                                        <option value="">Te parece interesante...</option>
+                                        <option value="S">Si, es interesante</option>
+                                        <option value="N">No, no lo veo relevante</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </label>
+                                <label>
                                     <input type="hidden" id="identifier_view" name="identifier_view" />
                                 </label>
                                 <label>
                                     <input required type="text" id="control" name="control" placeholder="4 dígitos:*" data-constraints="@Number"
-                                    title="Para prevenir spam, por favor indique cualquier número de 4 dígitos" size="8" maxlength="20"/>
-                                    <img src="images/img-question-gif.png" width="22" height="22" title="Para prevenir spam, por favor indique cualquier número de 4 dígitos"/>
+                                    title="Para prevenir el spam, por favor indique cualquier número de 4 dígitos" size="8" maxlength="20"/>
+                                    <img src="images/img-question-gif.png" width="22" height="22" title="Para prevenir el spam, por favor indique cualquier número de 4 dígitos"/>
                                     <div class="help-block with-errors"></div>
                                 </label>
                                 <label>
@@ -388,10 +408,21 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8 agile-bottom-right">
                     <div class="agile-bottom-grid">
-                        <div class="area-grids-heading heading-video">
+                        <!--div class="area-grids-heading heading-video">
                             <h3 class="active"><a data-toggle="collapse" href="#graph-1">Camera 1</a></h3>
-                            <input type="hidden" id="id_cp" name="id_cp" value="CAMASSISTANT-CP000006" />
-                            <input type="hidden" id="id_cam" name="id_cam" value="CP000006-CAM1-VI01-20161015" class="id_cams"/>
+                        </div-->
+                        <div class="area-grids-heading heading-video">
+                            <div id="cam-title" class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Descripción del caso de estudio</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Presentamos un breve ejemplo del uso de la herramienta de modelado para generar simulaciones. Esta versión es para desarrollo y es posible integrarla con componentes de Android para ampliar funcionalidades. Descarga la presentación y envia tus sugerencias.
+                                </div>
+                                <input type="hidden" id="id_cp" name="id_cp" value="CAMASSISTANT-CP000006" />
+                                <input type="hidden" id="id_cam" name="id_cam" value="CP000006-CAM1-VI01-20161015" class="id_cams"/>
+                            </div>
+                            <br/>
                         </div>
                         <div id="graph-1" class="video-js-responsive-container vjs-hd">
                             <video id="Video1" preload="auto" class="video-js vjs-default-skin" style="border: 1px solid green;" width="auto" height="auto"
@@ -433,7 +464,7 @@
                                                 Current: <span class="text-video" id="curTime-tools" title="Current time"></span>
                                             </li>
                                             <li id="add-tag-1" class="dynamic-demo-add-tag" style="align-self: flex-end;">
-                                                <img src="images/create_comment.png" width="30" height="30" title="Add Comment" alt="Add Comment" class="tooltip_"/>
+                                                <img src="images/img_add_st_a.png" title="Add Comment" alt="Add Comment" class="tooltip_"/>
                                             </li>
                                         </ul>
                                     </div>
@@ -564,9 +595,11 @@
         var identifier = $("#identifier").val();
         var control = $("#control").val();
         var url = $("#url_identifier").val();
+        var considerate = $("#considerate").val();
+        var type_stude = $("#type_stude").val();
 
-        if (isNumeric(document.getElementById("control"), "¡Indique un valor númerico!")){
-            if (name != "" && identifier != "" && url != "") {
+        if (name != "" && identifier != "" && url != "" && considerate != "" && type_stude != "") {
+            if (isNumeric(document.getElementById("control"), "¡Indique un valor númerico!")) {
                 $("#url_identifier_data").val(url);
                 $("#identifier_data").val(identifier);
                 $("#json-str").val(JSON.stringify(caption_data));
@@ -584,11 +617,11 @@
                 $("#form_id_cam").val(id_cams);
 
                 document.getElementById('theForm').submit();
-                document.getElementById('success').innerHTML='Enviado.';
+                document.getElementById('success').innerHTML = 'Enviado.';
                 setTimeout("document.getElementById('form-cam').style.display = 'none';", 5000);
-            }else{
-                alert("¡Indique todos los campos obligatorios!");
             }
+        }else{
+            alert("¡Indique todos los campos obligatorios!");
         }
     }
 
@@ -701,11 +734,7 @@
             });
 
             $("#mute").click(function(){
-                if (video1.muted) {
-                    video1.muted = false;
-                } else {
-                    video1.muted = true;
-                }
+                video1.muted = !video1.muted;
             });
 
             video1.addEventListener("timeupdate", function () {

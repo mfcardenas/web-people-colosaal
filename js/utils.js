@@ -44,15 +44,34 @@ $(function() {
     } )
 });
 
+/**
+ * Set language for web site.
+ * @returns {*}
+ */
+function get_language() {
+    var lang = $.jStorage.get("language");
+    if (lang == '' || lang == 'undefined' || lang == null) {
+        lang = (navigator.language.split("-")[0] != undefined)? navigator.language.split("-")[0]: "es";
+    }
+    return lang;
+}
+
+function set_language(lang){
+    $.jStorage.set("language", lang);
+}
+
 $(document).ready(function() {
+    //lang_nav_ = (navigator.language.split("-")[0] != undefined)? navigator.language.split("-")[0]: "es";
     i18n.init(function(t) {
-        traslateLang('es');
+        traslateLang(get_language());
     });
 });
 
 function traslateLang(lang){
     i18n.init(function(t) {
         (lang == 'es') ? idioma = 'es': idioma = 'en';
+        set_language(lang);
+
         var brand = $("#brand");
         if (brand != undefined){
             brand.i18n({lng: idioma});
